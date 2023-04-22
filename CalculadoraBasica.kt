@@ -2,6 +2,7 @@ package com.example.aprendiendokotlin
 
 class CalculadoraBasica {
     // Función para realizar la suma
+    // Otro comentario
     fun sumar(num1: Double, num2: Double): Double {
         return num1 + num2
     }
