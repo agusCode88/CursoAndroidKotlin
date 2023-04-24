@@ -21,7 +21,7 @@ Clase 1- Variables y funciones en Kotlin
 * Actividad practica , calculadora basica en Kotlin.
 
 24/04/2023
-Clase 2- Condicionales en Kotlin 
+<br>Clase 2- Condicionales en Kotlin<br/> 
 
 * Condicional IF
 * Condiocional ELSE 
@@ -34,7 +34,7 @@ Actividad practica :
 https://developer.android.com/codelabs/basic-android-kotlin-compose-kotlin-fundamentals-practice-problems?hl=es-419#0
 
 25/04/2023
-Clase 3 - Ciclos, Array y listas en Kotlin 
+<br>Clase 3 - Ciclos, Array y listas en Kotlin<br/> 
 
 * Concepto de array 
 * Recorriendo Arrays con ciclos 
