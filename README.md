@@ -1,7 +1,7 @@
 # PrimeraClaseAndroid Repositorio
 
 22/04/2023
-<br>Clase 0 br/> 
+<br>Clase 0 <br/> 
 
 * Instrucciones Portafolio 
 * Historia de Git 
@@ -18,7 +18,7 @@ Clase 1- Variables y funciones en Kotlin
 * Historia y fundamentos de Kotlin 
 * Variables en Kotlin 
 * Funciones en Kotlin 
-* Actividad practiva , calculadora basica en Kotlin.
+* Actividad practica , calculadora basica en Kotlin.
 
 24/04/2023
 Clase 2- Condicionales en Kotlin 
@@ -27,7 +27,7 @@ Clase 2- Condicionales en Kotlin
 * Condiocional ELSE 
 * Condicional IF ELSE 
 * Condicionales anidados
-* Conbcepto de Nulabilidad en Kotlin 
+* Concepto de Nulabilidad en Kotlin 
 
 Actividad practica : 
 
