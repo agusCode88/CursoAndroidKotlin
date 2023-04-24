@@ -183,6 +183,23 @@ fun trabajandoVariableAny(valor: Any){
 
 }
 
+/*
+ Hay veces en que las variables puden venir nulas.
+ */
+
+fun nulabiliadEnKotlin (nombre : String?) {
+
+
+    //val nombre: String? = null
+
+    println("El nombre es ${nombre ?: "desconocido"}")
+    println(nombre!![3]) // Estoy seguro que esto no sera nulo
+    print(nombre!!.get(3)) // pero si es nulo ?
+    print(nombre?.get(3) ?: "Es nulo peor no se cae")
+
+
+}
+
 
 
 
