@@ -4,6 +4,10 @@
 <br>Clase 0 <br/> 
 
 * Instrucciones Portafolio 
+* Portafolios de inspiracion :
+
+ https://github.com/kautukkundan/Awesome-Profile-README-templates
+
 * Historia de Git 
 * Fundamentos de git
 * Instalacion de Git
