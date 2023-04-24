@@ -1,3 +1,122 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+bintray.properties
+
+## SCA plugin: https://github.com/monits/static-code-analysis-plugin/
+config/*
+
+## Not ignoring detekt configuration file
+!config/detekt.yml
+
+## Gradle
+.gradle
+build-cache
+
+## Android
+bin
+build
+gen
+lint.xml
+rp
+
+## Built application files
+*.apk
+*.ap_
+
+## Files for the ART/Dalvik VM
+*.dex
+
+## Java class files
+*.class
+
+## Log files
+*.log
+
+# Eclipse
+.project
+.classpath
+.settings
+.checkstyle
+
+# IntelliJ IDEA
+.idea
+*.iml
+*.ipr
+*.iws
+*.jks
+.externalNativeBuild
+classes
+gen-external-apklibs
+out/
+bin/
+gen/
+.navigation/
+captures/
+.run
+
+# Run Scripts
+run.sh
+run_debug.sh
+
+# Visual Studio Code
+.vscode
+
+# Maven
+target
+release.properties
+pom.xml.*
+
+# Ant
+build.xml
+ant.properties
+local.properties
+proguard.cfg
+proguard-project.txt
+proguard/
+
+# Fastlane
+fastlane/build
+fastlane/report.xml
+fastlane/.env.*
+fastlane/README.md
+
+# Other
+.DS_Store
+tmp
+*.orig
+*.rdb
+*jacoco.exec
+mobile-cd/
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+*.hprof
+
+# Proguard generated reports
+*/class_files.txt
+*/seeds.txt
+*/mapping.txt
+*/unused.txt
+*/configuration.txt
