@@ -191,7 +191,9 @@ fun nulabiliadEnKotlin (nombre : String?) {
 
 
     //val nombre: String? = null
-
+    // se utiliza el operador elvis ?: para verificar si la variable "nombre" es nula.
+    // Si es nula, se imprime el mensaje "desconocido", de lo contrario,
+    // se imprime el valor de la variable.
     println("El nombre es ${nombre ?: "desconocido"}")
     println(nombre!![3]) // Estoy seguro que esto no sera nulo
     print(nombre!!.get(3)) // pero si es nulo ?
