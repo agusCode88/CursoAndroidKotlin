@@ -184,21 +184,26 @@ fun trabajandoVariableAny(valor: Any){
 }
 
 /*
- Hay veces en que las variables puden venir nulas.
+ Safe-Navegation Operator
+En primer lugar, tenemos el Safe-Navegation Operator, también conocido como operador de navegación segura.
+Es una forma que nos provee Kotlin para poder usar variables nulas en nuestra aplicación y, del mismo modo,
+poder acceder a las propiedades que estas contienen.
+ “?.”
+
+ Se utiliza el operador elvis ?: para verificar si la variable "nombre" es nula. Si es nula,
+  imprime el mensaje por pantella, de lo contrario,se imprime el valor de la variable.
+
  */
 
-fun nulabiliadEnKotlin (nombre : String?) {
+fun nulabiliadadEnKotlin () {
 
-
-    //val nombre: String? = null
-    // se utiliza el operador elvis ?: para verificar si la variable "nombre" es nula.
-    // Si es nula, se imprime el mensaje "desconocido", de lo contrario,
-    // se imprime el valor de la variable.
-    println("El nombre es ${nombre ?: "desconocido"}")
-    println(nombre!![3]) // Estoy seguro que esto no sera nulo
-    print(nombre!!.get(3)) // pero si es nulo ?
-    print(nombre?.get(3) ?: "Es nulo peor no se cae")
-
+    //Posiblemente esta variable puede ser nula
+    var nombre:String? = null
+    // La variable es nula pero no se cae
+    println(nombre?.length)
+    println("El tamaño del String es ${nombre?.length ?: "Es nulo pero no se cae"}")
+//  println(nombre!![3]) // Estoy seguro que esto no sera nulo
+    //  print(nombre!!.get(3)) // pero si es nulo ?
 
 }
 
