@@ -1,4 +1,4 @@
-package com.example.aprendiendokotlin
+package com.example.aprendiendokotlin.materiaKotlin
 
 var resultado = 0
 var resultadoFloat: Float = 0f
