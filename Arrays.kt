@@ -42,23 +42,18 @@ fun loBasicoDeArrays(){
     var nombreObtenido: String? = arrayNombres[2]
     println(nombreObtenido)
 
-
     //se crea un arreglo llamado "numeros" con una longitud de 5 elementos y se inicializa cada elemento con el valor 5
     val numerosEnArray:IntArray = IntArray(5) { 5 }
     println("Esta es el elemento 2 del indice 1:  ${numerosEnArray[1]}")
-
     //Con la función Array(size, init)
     val numeros = Array(3){i -> i*2}
     println("Esta es la posisicon 2 de los indices :  ${numeros[2]}")
-
     // Con la funcion IntArray
     //se crea un arreglo llamado "numeros" con una longitud de 5 elementos y se inicializa cada elemento
     // con el valor por defecto para el tipo de dato Int (que es 0)
     val numerosEnteros:IntArray? = IntArray(5)
-
     // Podemos asiganr un valor a la posicion del array
     numerosEnteros!![0]= 15
-
     // Tamaños de un Array
     if(numerosEnteros.size <= 5){
         println(numerosEnteros[0])
