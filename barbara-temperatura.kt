@@ -13,10 +13,11 @@ De Fahrenheit a Kelvin: K = 5/9 (°F - 32) + 273.15
 Ten en cuenta que el método String.format("%.2f", /* measurement */ ) se usa para convertir un número en un tipo String con 2 decimales.
 * */fun main() {
     // Ejemplos de uso
-    imprimirTemperaturaFinal(25.0, "Celsius", "Fahrenheit") { celsiusAFahrenheit(it) }
-    imprimirTemperaturaFinal(300.0, "Kelvin", "Celsius") { kelvinACelsius(it) }
-    imprimirTemperaturaFinal(98.6, "Fahrenheit", "Kelvin") { fahrenheitAKelvin(it) }
+    imprimirTemperaturaFinal(25.0, "Celsius", "Fahrenheit", ::celsiusAFahrenheit)
+    imprimirTemperaturaFinal(300.0, "Kelvin", "Celsius", ::kelvinACelsius)
+    imprimirTemperaturaFinal(98.6, "Fahrenheit", "Kelvin", ::fahrenheitAKelvin)
 }
+
 
 fun celsiusAFahrenheit(celsius: Double): Double {
     return 9/5 * celsius + 32
