@@ -191,7 +191,7 @@ poder acceder a las propiedades que estas contienen.
  “?.”
 
  Se utiliza el operador elvis ?: para verificar si la variable "nombre" es nula. Si es nula,
-  imprime el mensaje por pantella, de lo contrario,se imprime el valor de la variable.
+  imprime el mensaje por pantalla, de lo contrario,se imprime el valor de la variable.
 
  */
 
