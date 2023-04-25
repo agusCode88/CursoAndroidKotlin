@@ -34,4 +34,16 @@ fun printNotificationSummary(numberOfMessages: Int) {
         println("Your phone is blowing up! You have 99+ notifications.")
     }
 }
+/*
+fun printNotificationSummary2(numberOfMessages2: Int) {
+    val message = if (numberOfMessages2 < 100) {
+        "You have $numberOfMessages2 notifications."
+    } else {
+        "Your phone is blowing up! You have 99+ notifications."
+    }
+    println(message)
+}
+*/
+
+
 
