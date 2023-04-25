@@ -30,20 +30,23 @@ Clase 1- Variables y funciones en Kotlin
 * Condicional IF
 * Condiocional ELSE 
 * Condicional IF ELSE 
-* Condicionales anidados
-* Concepto de Nulabilidad en Kotlin 
+* Condicionales anidados 
 
 Actividad practica : 
 
 https://developer.android.com/codelabs/basic-android-kotlin-compose-kotlin-fundamentals-practice-problems?hl=es-419#0
 
 25/04/2023
-<br>Clase 3 - Ciclos, Array y listas en Kotlin<br/> 
+<br>Clase 3 - Ciclos y Arrays en Kotlin<br/> 
 
+* Concepto de Nulabilidad en Kotlin
 * Concepto de array 
 * Recorriendo Arrays con ciclos 
 * Ciclo While y Do- While
 * Ciclo FOR 
-* Concepto de Listas en Kotlin 
 
 * Actividad Practica : 
+
+https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaArreglos.kt
+
+
