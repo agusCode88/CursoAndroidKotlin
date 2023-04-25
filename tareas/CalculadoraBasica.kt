@@ -1,4 +1,4 @@
-package com.example.aprendiendokotlin
+package tareas
 
 class CalculadoraBasica {
     // Función para realizar la suma
