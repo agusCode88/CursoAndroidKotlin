@@ -28,6 +28,7 @@ fun main() {
     println("The movie ticket price for a person aged $senior is \$${ticketPrice(senior, isMonday)}.")
 }
 
+
 fun ticketPrice(age: Int, isMonday: Boolean): Int {
     return when {
         age <= 12 -> 15 // Precio para niños (12 años o menos)
