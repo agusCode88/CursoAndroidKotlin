@@ -5,7 +5,7 @@ class Condicional {
 
     fun main(){
 
-        ifSinParametros()
+        nulabilidad()
 
 
 
@@ -28,5 +28,17 @@ class Condicional {
     fun ifConParametro(){
 
     }
+
+
+    fun nulabilidad(){
+
+        var nombrePersona = null
+        println(nombrePersona)
+
+
+
+
+    }
+
 
 }
