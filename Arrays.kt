@@ -1,7 +1,8 @@
 package com.example.aprendiendokotlin
 
 fun main(){
-    loBasicoDeArrays()
+    //loBasicoDeArrays()
+    arrayListEnKotlin()
 }
 
 
@@ -61,5 +62,59 @@ fun loBasicoDeArrays(){
     } else {
         println("No hay valores en el Array")
     }
+
+}
+
+fun arrayListEnKotlin(){
+
+    var nombre1 = "Ana"
+    var nombre2 = "Maria"
+    var nombre3 = "Pedro"
+    var nombre4 = "Ulises"
+
+    var arrayNombres = arrayListOf<String>()
+
+    // Agegar elementos de uno en uno
+    arrayNombres.add(nombre1)
+    arrayNombres.add(nombre2)
+    arrayNombres.add(nombre3)
+    arrayNombres.add(nombre4)
+
+    arrayNombres.addAll(listOf("Hola","Clase"))
+
+    // Acceso a datos
+    var nombreObtenido: String = arrayNombres[1]
+    println("El nombre de la posicon 2 es: $nombreObtenido")
+
+    //Modificacion de los Datos
+    arrayNombres[5]="Hola esto es una modificacion"
+    println(arrayNombres)
+
+    //Eliminacion de los datos
+    arrayNombres.removeAt(4)
+    println(arrayNombres)
+
+    /*
+    Funciones especiales de las listas
+     */
+
+    //Recorrer un arreglo
+    arrayNombres.forEach {
+        println(it)
+    }
+
+    //Contar la cantidad de elementos de un arreglo
+    var catidadElementos = arrayNombres.count()
+    println("La cantidad de elementos es: $catidadElementos")
+
+    // Dejar en blanco un arreglo
+    arrayNombres.clear()
+
+    // Traer el primer elemento
+    arrayNombres.first()
+
+    //Traer al ultimo elemento
+    arrayNombres.last()
+
 
 }

@@ -4,6 +4,7 @@ package com.example.aprendiendokotlin
 fun main (){
     //recorrerListaDeStrings()
     //practicaFor()
+    cicloForBasicoEnKotlin()
 
 }
 
@@ -12,13 +13,28 @@ fun cicloForBasicoEnKotlin(){
         println(i)
     }
 
+    // Recorre de 1 a n pero no toma en cuenta el ultimo valor
+    for(i in 0 until 5){
+        println(i)
+    }
+
+    for(i in 1..10 step 2){
+        println(i)
+    }
+
+    for (i in 10 downTo 0 step 2){
+        println(i)
+    }
+
+    var ranGoValoresArray:IntRange = (0..20)
+
 }
 
 fun practicaFor(){
 
     var arregloDeStrings = arrayOf("Nombre 1","Nombre 2","Nombre 3","Nombre 4","Nombre 5")
 
-    for (nombre in arregloDeStrings) {
+    for (nombre:String in arregloDeStrings) {
         println("El nombre es : $nombre")
         //println("El indice es ${arregloDeStrings.indices}")
     }
@@ -29,9 +45,7 @@ fun practicaFor(){
         println("Indice $i Valor: $valor")
     }
 
-
     for ((indice,nombre) in arregloDeStrings.withIndex()){
-
         println("$indice: $nombre")
 
     }
