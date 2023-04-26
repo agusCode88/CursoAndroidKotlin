@@ -8,7 +8,9 @@ fun main(){
     //obtenerMesAnio(2)
     //obtenerMesDelAnioConWhen(14)
     //obtenerTrimestreDelAnioSegunMes(6)
-    elWhenPuedeEvaluarAny(true)
+    //elWhenPuedeEvaluarAny(true)
+    nulabilidadEnKotlinEjemplo()
+
 }
 
 /*
@@ -162,3 +164,15 @@ fun elWhenPuedeEvaluarAny(valor : Any){
 
     }
 }
+
+// operador elvis ?
+fun nulabilidadEnKotlinEjemplo(){
+
+    var nombrePersona : String? = null
+
+    println(nombrePersona?.length)
+
+    println("el tamaño del String es... ${nombrePersona?.length ?: "nulo pero no se cae, ojo" }")
+}
+//Safe-Navigation Operator
+
