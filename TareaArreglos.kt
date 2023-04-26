@@ -22,8 +22,8 @@ y acepte solo enteros como entrada por teclado.
 
 
 fun main() {
-    val tamañoArreglo = solicitarTamañoArreglo()
-    var arreglo = crearArreglo(tamañoArreglo)
+    val tamanioArreglo = solicitarTamañoArreglo()
+    var arreglo = crearArreglo(tamanioArreglo)
     arreglo=llenarArreglo(arreglo)
 
     for (valor in arreglo){
@@ -35,7 +35,7 @@ fun main() {
 }
 
 
-fun solicitarTamañoArreglo(): Int {
+fun solicitarTamanioArreglo(): Int {
     var tamanio: Int? = null
     do {
         println("Ingrese la cantidad de elementos del arreglo:")
@@ -51,8 +51,8 @@ fun solicitarTamañoArreglo(): Int {
 
 }
 
-fun crearArreglo(tamaño: Int): IntArray {
-    return IntArray(tamaño)
+fun crearArreglo(tamanio: Int): IntArray {
+    return IntArray(tamanio)
 }
 
 fun llenarArreglo(arreglo : IntArray):IntArray {
