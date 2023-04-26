@@ -24,7 +24,7 @@ fun forMagico() {
     //Creación de un arreglo que contiene los nombres de la familia bíblica
     var familiaBiblia = arrayOf(nombrePersona1, nombrePersona2, nombrePersona3, nombrePersona4, nombrePersona5)
 
-    //Utilización del bucle "for" para recorrer el arreglo de nombres y resaltar el último nombre
+    //Utilización del bucle "for" para recorrer el arreglo de nombres y resaltar el último nombre.
     for (i in familiaBiblia) {
         println(nombrePersona5)
     }
