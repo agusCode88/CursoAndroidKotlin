@@ -49,4 +49,21 @@ https://developer.android.com/codelabs/basic-android-kotlin-compose-kotlin-funda
 
 https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaArreglos.kt
 
+Clase 4 - Listas de Arreglos, Mapas o Diccionario de Datos 
+
+* Recorriendo un Array con for
+* Uso del while y do while
+* Crear una lista de Datos
+* Accediendo a los datos de la lista
+* Modificando datos de la lista
+* Eliminacion de Datos de una lista 
+* Funcionalidades especiales de las listas
+* Creando Diccionario o Mapa de datos
+
+********  Apoyo material de estudio : https://developer.android.com/codelabs/basic-android-kotlin-collections?hl=es-419#0
+
+Actividad Practica: https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaArreglos.kt
+
+
+
 
