@@ -1,71 +1,38 @@
-# Created by https://www.gitignore.io/api/android,androidstudio
 
-### Android ###
+#built application files
 *.apk
 *.ap_
 *.aab
+                            
+# files for the dex VM
 *.dex
+                             
+# Java class files
 *.class
-*.dex
-*.pro
-*.so
-*.o
-*/gen/*
-*/build/*
-*/local.properties
-*.log
-*.pot
-*.dat
-*.out
-*.pyc
-*.pyo
-*.pyd
-*.swp
-*.seed
-*.lock
-*.bak
-*~
-*.part
-*.patch
+                             
+# generated files
+bin/
+gen/
+                             
+# Local configuration file (sdk path, etc)
+local.properties
+                         
+# Windows thumbnail db
+Thumbs.db
+                 
+# OSX files
+.DS_Store
+                             
+# Android Studio
 *.iml
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/gradle.xml
-.idea/assetWizardSettings.xml
-.idea/dictionaries
-.idea/libraries
-.idea/caches
-.idea/modules.xml
-.idea/navEditor.xml
-.idea/sonarlint
-.idea/httpRequests
-.idea/jsLibraryMappings.xml
-.idea/datasources.xml
-.idea/dataSources.ids
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
-
-### Android Studio ###
-*.iml
+.idea
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
 .gradle
-/build/
-/*/build/
-/local.properties
-/.idea/workspace.xml
-/.idea/tasks.xml
-/.idea/gradle.xml
-/.idea/assetWizardSettings.xml
-/.idea/dictionaries
-/.idea/libraries
-/.idea/caches
-/.idea/modules.xml
-/.idea/navEditor.xml
-/.idea/sonarlint
-/.idea/httpRequests
-/.idea/jsLibraryMappings.xml
-/.idea/datasources.xml
-/.idea/dataSources.ids
-/.idea/sqlDataSources.xml
-/.idea/dynamic.xml
-/.idea/uiDesigner.xml
+build/
+.navigation
+captures/
+output.json 
+     
+#NDK
+obj/
+.externalNativeBuild
