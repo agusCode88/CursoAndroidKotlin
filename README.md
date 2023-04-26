@@ -49,6 +49,7 @@ https://developer.android.com/codelabs/basic-android-kotlin-compose-kotlin-funda
 
 https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaArreglos.kt
 
+26/04/2023
 Clase 4 - Listas de Arreglos, Mapas o Diccionario de Datos 
 
 * Recorriendo un Array con for
