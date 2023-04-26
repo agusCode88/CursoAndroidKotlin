@@ -22,7 +22,7 @@ y acepte solo enteros como entrada por teclado.
 
 
 fun main() {
-    val tamanioArreglo = solicitarTamañoArreglo()
+    val tamanioArreglo = solicitarTamanioArreglo()
     var arreglo = crearArreglo(tamanioArreglo)
     arreglo=llenarArreglo(arreglo)
 
