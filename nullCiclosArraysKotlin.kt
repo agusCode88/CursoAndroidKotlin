@@ -11,11 +11,14 @@ si es nula, imprime el mensaje por pantalla, de lo contrario, se imprime el valo
  */
 fun main(){
 
-  //  nulabilidadEnKotlinEjemplo()
-  // trabajandoConArrays()
-    //forMasBasico()
-    forMagico()
+    //  nulabilidadEnKotlinEjemplo()
+    // trabajandoConArrays()
+    // forMasBasico()
+    // forMagico()
+    // practicaDeBucleFor()
+    recorriendoArraysConFor()
 }
+
 
 //Null
 fun nulabilidadEnKotlinEjemplo(){
@@ -136,4 +139,46 @@ fun forMagico(){
         println(nombre)
     }
 
+}
+
+fun practicaDeBucleFor(){
+
+    //Recorrer un rango de numeros
+    for(indice in 0..10){
+        println("For normal ${indice}")
+    }
+    //recorre el rango de numeros pero deja afuera el ultimo
+    for(indi in 1 until 10){
+        println("For until: ${indi}")
+    }
+    //Recorre el rango pero con saltos indicados en el usuario
+    for(i in 1 .. 10 step 3){
+        println("For Step: $i")
+    }
+    //Recorrer el rango de bumeros en orden descendente
+    for(i in 10 downTo 1){
+        println("For con DownTo: $i")
+    }
+}
+
+fun recorriendoArraysConFor(){
+
+    var arregloDeNumeros: IntArray = IntArray (10)
+    var arregloDeNumerosRango: IntRange = (1 .. 20)
+
+    for(numero in arregloDeNumerosRango){
+        println(numero)
+    }
+    for(numero in arregloDeNumeros){
+        println(numero)
+    }
+    for(valor in arregloDeNumeros.indices){ // recorre el indice
+        arregloDeNumeros[valor] = valor+1 // con el +1 la lista empieza desde 1, sin este empieza desde 0
+    }
+    for(valor in arregloDeNumeros){
+        println(valor)
+    }
+    for((indice,valor) in arregloDeNumeros.withIndex()){ // quiero saber su indice y su valor
+        println("Este es ${indice} y este es el ${valor}")
+    }
 }
