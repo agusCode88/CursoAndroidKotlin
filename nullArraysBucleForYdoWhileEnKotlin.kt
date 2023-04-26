@@ -16,7 +16,10 @@ fun main(){
     // forMasBasico()
     // forMagico()
     // practicaDeBucleFor()
-    recorriendoArraysConFor()
+    //recorriendoArraysConFor()
+    //nuestroPrimerWhile(10)
+    nuestroPrimerDoWhile(10)
+
 }
 
 
@@ -181,4 +184,24 @@ fun recorriendoArraysConFor(){
     for((indice,valor) in arregloDeNumeros.withIndex()){ // quiero saber su indice y su valor
         println("Este es ${indice} y este es el ${valor}")
     }
+}
+
+fun nuestroPrimerWhile(valor: Int){
+
+    var i=0
+    while(i<=10){
+        println("Este es el valor dentro del ciclo ${i}")
+        i++
+    }
+    println("Se salió del ciclo")
+}
+
+fun nuestroPrimerDoWhile(valor: Int){
+
+    var i = 1
+    do{
+       println("Este es el valor en el Do While ${i}")
+        i++ // suma uno para la siguiente repetición
+    }while(i<=valor)
+    println("Estoy fuera del ciclo")
 }
