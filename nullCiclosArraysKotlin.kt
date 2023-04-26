@@ -12,8 +12,9 @@ si es nula, imprime el mensaje por pantalla, de lo contrario, se imprime el valo
 fun main(){
 
   //  nulabilidadEnKotlinEjemplo()
-    trabajandoConArrays()
-
+  // trabajandoConArrays()
+    //forMasBasico()
+    forMagico()
 }
 
 //Null
@@ -90,5 +91,49 @@ tercera forma de declararlo
 
     println(numeroEdades2[3])
 
+    // Usando la clase BooleanArray
+    var booleanos1: BooleanArray = BooleanArray(3) // Crea un arreglo de 3 elementos inicializados en false
+    booleanos1[0] = true // Asigna true al primer elemento del arreglo
+    booleanos1[2] = true // Asigna true al tercer elemento del arreglo
+
+// Usando la función booleanArrayOf
+    var booleanos2: BooleanArray = booleanArrayOf(true, false, true) // Crea un arreglo de 3 elementos con los valores true, false y true respectivamente
+
+// Imprimir los valores de booleanos1
+    println("Valores de booleanos1:")
+    for (valor in booleanos1) {
+        println(valor)
+    }
+
+// Imprimir los valores de booleanos2
+    println("Valores de booleanos2:")
+    for (valor in booleanos2) {
+        println(valor)
+    }
+
 }
 
+fun forMasBasico(){
+    for (i in 1 .. 10)
+
+        println("Este es el valor del i : $i ")
+}
+
+fun forMagico(){
+    var nombrePersona1 : String? = "María Magdalena"
+    var nombrePersona2 : String? = "Pedro"
+    var nombrePersona3 : String? = "María"
+    var nombrePersona4 : String? = "José"
+    var nombrePersona5 : String? = "Jesús"
+
+    /*
+    Declaracion de Array 1
+     */
+
+    var familiaBiblia = arrayOf(nombrePersona1,nombrePersona2,nombrePersona3,nombrePersona4,nombrePersona5)
+
+    for (nombre in familiaBiblia){ //i puede ser cualquier cosa que estemos inocando
+        println(nombre)
+    }
+
+}
