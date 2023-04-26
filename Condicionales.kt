@@ -18,7 +18,9 @@ fun main() {
 //    operacionesConIfElse(4)
 //    getMesAnioconWhen(13)
 
-    trabajandoVariableAny(true)
+   // trabajandoVariableAny(true)
+
+    nulabilidadEnKotlinEjemplo()
 
 }
 
@@ -188,6 +190,7 @@ fun trabajandoVariableAny(valor: Any){
 En primer lugar, tenemos el Safe-Navegation Operator, también conocido como operador de navegación segura.
 Es una forma que nos provee Kotlin para poder usar variables nulas en nuestra aplicación y, del mismo modo,
 poder acceder a las propiedades que estas contienen.
+
  “?.”
 
  Se utiliza el operador elvis ?: para verificar si la variable "nombre" es nula. Si es nula,
@@ -195,17 +198,32 @@ poder acceder a las propiedades que estas contienen.
 
  */
 
-fun nulabiliadadEnKotlin () {
 
-    //Posiblemente esta variable puede ser nula
-    var nombre:String? = null
-    // La variable es nula pero no se cae
-    println(nombre?.length)
-    println("El tamaño del String es ${nombre?.length ?: "Es nulo pero no se cae"}")
-//  println(nombre!![3]) // Estoy seguro que esto no sera nulo
-    //  print(nombre!!.get(3)) // pero si es nulo ?
+fun nulabilidadEnKotlinEjemplo(){
 
+    var nombrePersona : String? = null
+
+    nombrePersona = "Pedro"
+
+    println(nombrePersona?.length)
+
+    println("El tamanio del String es ${nombrePersona?.length ?: "Esta variables es nula , ojo"}")
+
+    println("Estoy seguro que esto no es nulo ${nombrePersona!!.length} ")
+
+    // Esta condocional es lo mismo a la linea de arriba
+    if (nombrePersona == null) {
+        println("Ojo que le valor es nulo ")
+    } else {
+        println(nombrePersona.length)
+    }
 }
+
+
+
+
+
+
 
 
 
