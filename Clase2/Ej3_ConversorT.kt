@@ -14,7 +14,7 @@ Ten en cuenta que el método String.format("%.2f", /* measurement */ ) se usa pa
 
 fun main() {
     // Fill in the code.
-    // metodo: String.format("%.2f", /* measurement */ )
+    //  conversionFormula: (Double) -> Double) metodo para convertir sumar la formula de arriba de las temp.
 
     val celsiusToFahrenheit: (Double) -> Double = { celsius -> celsius * 9 / 5 + 32 }
     val kelvinToCelsius: (Double) -> Double = { kelvin -> kelvin - 273.15 }
