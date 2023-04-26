@@ -1,5 +1,11 @@
 package com.example.aprendiendokotlin
 
+/*
+  Las condicionales son imprescindeibles en la programación ,
+  debido a que tods los caminos de uan aplicación depende de que
+  esta app tome decisiones . Esto es lo que le da lógica a nuestra
+  aplicación y ña hace más "inteligente"
+ */
 fun main() {
 
 //    ifBasicoSinParametros()
@@ -25,13 +31,6 @@ fun main() {
 }
 
 /*
-  Las condicionales son imprescindeibles en la programación ,
-  debido a que tods los caminos de uan aplicación depende de que
-  esta app tome decisiones . Esto es lo que le da lógica a nuestra
-  aplicación y ña hace más "inteligente"
- */
-
-/*
 Un If() es una condición , si pasa esto , haz esto
  */
 fun ifBasicoSinParametros() {
@@ -54,18 +53,13 @@ fun ifBasicoConParametros(nombreParametro: String): Boolean {
     var esVerdad = true
 
     if (nombre == nombreParametro) {
-
         esVerdad = true
-
     } else {
-
         esVerdad = false
     }
     if (nombre.equals(nombreParametro)) {
-
         esVerdad = true
         return esVerdad
-
     } else {
         esVerdad = false
         return esVerdad
@@ -198,17 +192,13 @@ poder acceder a las propiedades que estas contienen.
 
  */
 
-
 fun nulabilidadEnKotlinEjemplo(){
 
     var nombrePersona : String? = null
 
     nombrePersona = "Pedro"
-
     println(nombrePersona?.length)
-
     println("El tamanio del String es ${nombrePersona?.length ?: "Esta variables es nula , ojo"}")
-
     println("Estoy seguro que esto no es nulo ${nombrePersona!!.length} ")
 
     // Esta condocional es lo mismo a la linea de arriba

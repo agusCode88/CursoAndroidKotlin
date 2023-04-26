@@ -27,39 +27,40 @@ Array(size) { lambda } -> Crea un arreglo con la longitud especificada y los val
 
  */
 
-fun main(){
+fun main() {
     trabajandoConArrays()
 }
 
-fun trabajandoConArrays(){
+fun trabajandoConArrays() {
 
-    var nombrePersona1 : String? = "Maria Magdalena"
-    var nombrePersona2 : String? = "Pedro"
-    var nombrePersona3 : String? = "Maria"
-    var nombrePersona4 : String? = "Jose"
-    var nombrePersona5 : String? = "Jesus"
+    var nombrePersona1: String? = "Maria Magdalena"
+    var nombrePersona2: String? = "Pedro"
+    var nombrePersona3: String? = "Maria"
+    var nombrePersona4: String? = "Jose"
+    var nombrePersona5: String? = "Jesus"
 
     /*
     Declaracion de array 1
      */
-    var familiaBiblia = arrayOf(nombrePersona1,nombrePersona2,nombrePersona3,nombrePersona4,nombrePersona5)
+    var familiaBiblia =
+        arrayOf(nombrePersona1, nombrePersona2, nombrePersona3, nombrePersona4, nombrePersona5)
     var elHijoDeDios: String? = familiaBiblia[4]
     println("El hijo de Dios es : $elHijoDeDios")
 
     /*
     Segunda forma de setear un array
      */
-     var numeroEdades: IntArray = IntArray(5)
-      numeroEdades[0] = 1
-      numeroEdades[1] = 2
-      numeroEdades[2] = 3
-      numeroEdades[3] = 4
-      numeroEdades[4] = 5
+    var numeroEdades: IntArray = IntArray(5)
+    numeroEdades[0] = 1
+    numeroEdades[1] = 2
+    numeroEdades[2] = 3
+    numeroEdades[3] = 4
+    numeroEdades[4] = 5
 
     println(numeroEdades[4])
 
-    var numeroEdades2: IntArray = IntArray(5) {i-> i* 3}
+    var numeroEdades2: IntArray = IntArray(5) { i -> i * 3 }
     println(numeroEdades2[0])
-    numeroEdades2[0]=15
+    numeroEdades2[0] = 15
 
 }
