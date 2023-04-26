@@ -21,12 +21,14 @@ y acepte solo enteros como entrada por teclado.
  */
 
 
-
 fun main() {
     val tamañoArreglo = solicitarTamañoArreglo()
-    val arreglo = crearArreglo(tamañoArreglo)
+    var arreglo = crearArreglo(tamañoArreglo)
+    arreglo=llenarArreglo(arreglo)
 
-    //llenarArreglo(arreglo)
+    for (valor in arreglo){
+        println(valor)
+    }
     //mostrarArregloInverso(arreglo)
     //mostrarArregloNormal(arreglo)
     //mostrarSumaArreglo(arreglo)
@@ -53,4 +55,21 @@ fun crearArreglo(tamaño: Int): IntArray {
     return IntArray(tamaño)
 }
 
+fun llenarArreglo(arreglo : IntArray):IntArray {
 
+    for (i in arreglo.indices) {
+        var numero: Int? = null
+        while (numero == null) {
+            println("Ingrese el número para la posición $i:")
+            try {
+                numero = readLine()?.toInt()
+                if (numero == null) throw Exception()
+            } catch (e: Exception) {
+                println("Ingrese un número válido.")
+            }
+        }
+        arreglo[i] = numero
+    }
+
+    return arreglo
+}
