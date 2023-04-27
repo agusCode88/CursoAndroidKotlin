@@ -1,4 +1,4 @@
-//package ejerciciosKotlin
+package ejerciciosKotlin
 //
 ///*En el código inicial que se proporciona en el siguiente fragmento de código, escribe un programa que calcule
 //los precios de estas entradas basados en la edad:
@@ -20,7 +20,6 @@
 //    val child = 5
 //    val adult = 28
 //    val senior = 87
-//
 //    val isMonday = true
 //
 //    println("The movie ticket price for a person aged $child is \$${ticketPrice(child, isMonday)}.")
@@ -31,5 +30,9 @@
 //fun ticketPrice(age: Int, isMonday: Boolean): Int {
 //
 //    // Un precio de entrada infantil de USD 15 para personas de 12 años o menos.
+//    if (age <= 12, isMonday) {
+//        return 15
+//    }
+//
 //
 //}
