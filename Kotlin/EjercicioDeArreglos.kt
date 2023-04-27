@@ -147,4 +147,3 @@ fun actualizarValor(arreglo: IntArray) {
         println("El índice ingresado no existe en el arreglo.")
     }
 }
-5
