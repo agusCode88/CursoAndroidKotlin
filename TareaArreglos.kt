@@ -20,21 +20,49 @@ Considere hacer las validaciones correspondientes para que el programa no se cai
 y acepte solo enteros como entrada por teclado.
  */
 
-
 fun main() {
+
     val tamanioArreglo = solicitarTamanioArreglo()
     var arreglo = crearArreglo(tamanioArreglo)
+    var opcion: Int? = null
+
     arreglo=llenarArreglo(arreglo)
 
-    for (valor in arreglo){
-        println(valor)
+    while (opcion != 7) {
+
+        println("╔══════════════════════════════════╗")
+        println("║           MENÚ PRINCIPAL         ║")
+        println("╠══════════════════════════════════╣")
+        println("║ 1. Orden Inverso                 ║")
+        println("║ 2. Orden Normal                  ║")
+        println("║ 3. Primero y ultimo              ║")
+        println("║ 4. Sumar Todos                   ║")
+        println("║ 5. Actualizar Suma               ║")
+        println("║ 6. Eliminar elemento             ║")
+        println("║ 7. Elimina todo                  ║")
+        println("║ 8. Salir                         ║")
+        println("╚══════════════════════════════════╝")
+
+        print("Ingresa tu opción: ")
+
+            try {
+                opcion = readLine()?.toInt()
+                when (opcion) {
+                    1 -> mostrarArregloInverso(arreglo)
+                    2 -> mostrarArregloNormal(arreglo)
+                    3 -> mostrarPrimerYUltimo(arreglo)
+                    4 -> mostrarSumaArreglo(arreglo)
+                    5 -> actualizarValor(arreglo)
+                    6-> eliminarUnElemento(arreglo)
+                    7-> borrarTodosLosDatos(arreglo)
+                    8 -> println("Hasta luego. Dale que puedes!")
+                    else -> println("Ingrese una opción válida.")
+                }
+            } catch (e: Exception) {
+                println("Ingrese una opción válida.")
+            }
     }
-    //mostrarArregloInverso(arreglo)
-    //mostrarArregloNormal(arreglo)
-    //mostrarSumaArreglo(arreglo)
 }
-
-
 fun solicitarTamanioArreglo(): Int {
     var tamanio: Int? = null
     do {
@@ -58,18 +86,115 @@ fun crearArreglo(tamanio: Int): IntArray {
 fun llenarArreglo(arreglo : IntArray):IntArray {
 
     for (i in arreglo.indices) {
-        var numero: Int? = null
-        while (numero == null) {
+        var numeroTeclado: Int? = null
+        while (numeroTeclado == null) {
             println("Ingrese el número para la posición $i:")
             try {
-                numero = readLine()?.toInt()
-                if (numero == null) throw Exception()
+                numeroTeclado = readLine()?.toInt()
+                if (numeroTeclado == null) throw Exception()
             } catch (e: Exception) {
                 println("Ingrese un número válido.")
             }
         }
-        arreglo[i] = numero
+        // Sale del ciclo while pero no del for, llena con el indice
+        arreglo[i] = numeroTeclado
     }
 
     return arreglo
+}
+
+fun mostrarArregloInverso(arreglo:IntArray){
+
+    println("Estos son los datos invertidos:")
+    /*
+    Es igual a esto int i= arreglo.size() - 1
+    hasta cero
+     */
+    for (i in arreglo.size - 1 downTo 0) {
+
+        print("[ ${arreglo[i]} ] ")
+        println("")
+
+    }
+}
+
+fun mostrarArregloNormal(arreglo: IntArray){
+
+    println("Estos son los datos ingresados")
+    for (numero in arreglo){
+        print("[ ${numero} ] ")
+        println("")
+    }
+}
+fun mostrarPrimerYUltimo(arreglo: IntArray){
+
+    var primerNUmero: Int =0
+    var ultimoNumero: Int = 0
+
+    primerNUmero= arreglo.first()
+    ultimoNumero= arreglo.last()
+
+    println("El primer registro es: $primerNUmero")
+    println("El ultimo registro es: $ultimoNumero")
+
+}
+fun mostrarSumaArreglo(arreglo: IntArray){
+
+    var suma:Int = arreglo.sum()
+    println("La suma de los numeros es: $suma")
+
+}
+fun actualizarValor(arreglo: IntArray){
+
+    var posicionNumero:Int? = 0
+    var numeroActualizado:Int? =0
+    var sumaActualizada=0
+
+    do {
+        println("Ingrese la posicion que deseas actualizar:")
+        try {
+            posicionNumero = readLine()?.toInt()
+            println("Ingrese el numero para actualizar:")
+            numeroActualizado = readLine()?.toInt()
+            if ( posicionNumero == null || numeroActualizado == null) throw Exception()
+        } catch (e: Exception) {
+            println("Ingrese un número válido.")
+        }
+    } while (posicionNumero == null)
+
+    if (posicionNumero < arreglo.size) {
+        arreglo[posicionNumero] = numeroActualizado!!
+        var sumaActualizada = arreglo.sum()
+        println("La nueva suma de los valores es: $sumaActualizada")
+        println("Arreglo actualizado: ${arreglo.joinToString()}")
+    } else {
+        println("La posición que desea actualizar no existe en el arreglo.")
+    }
+
+}
+fun eliminarUnElemento(arreglo: IntArray){
+
+    println("Ingrese la posicion que deseas actualizar:")
+    try {
+        val num = readLine()?.toInt() ?: 0
+        val copiaArreglo = IntArray(arreglo.size - 1) {
+            //Si el indice es menor al numero ingresado , se copia el numero en el mismo indice
+            // si no , se copia el elemento en el indice posterior
+                i -> if (i < num) arreglo[i] else arreglo[i + 1]
+        }
+        println("El número ${arreglo[num]} ha sido eliminado. Números actuales: ${copiaArreglo.contentToString()}")
+    } catch (e: Exception) {
+        println("Ingrese un número válido.")
+    }
+
+}
+
+fun borrarTodosLosDatos(arreglo: IntArray){
+
+    for (num in arreglo.indices){
+        arreglo[num]=0
+    }
+    print(arreglo.contentToString())
+
+
 }

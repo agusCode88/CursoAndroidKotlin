@@ -14,7 +14,7 @@ en que llenamos de datos esta estrcutura de datos.
 Los datos se agrupan segun una estrucutra y esta es < clave , valor>
 
 En los maps , la clave no puede estar repetida, es unica para cada elemento del map.
-Lo que si , 2 claves diferentes pueden tener el mismo valor
+Lo que si puede pasar,es que, 2 claves diferentes pueden tener el mismo valor
 
  */
 
@@ -52,8 +52,6 @@ fun mapsEnKotlin(){
 
         println("Elemento ${texto.key} - Valor ${texto.value}")
     }
-
-
 
 
 }
