@@ -2,7 +2,8 @@ package com.example.aprendiendokotlin
 
 fun main(){
 
-    mapsEnKotlin()
+    //mapsEnKotlin()
+    orientacionAObjetos()
 }
 
 /*
@@ -52,6 +53,23 @@ fun mapsEnKotlin(){
 
         println("Elemento ${texto.key} - Valor ${texto.value}")
     }
+
+
+}
+
+fun orientacionAObjetos(){
+
+    var estudianteBootCamp = Estudiante()
+    // En java
+    //Estudiante estudianteBootcamp = new Estudiante
+    
+    // Llenado de datos
+    estudianteBootCamp.rut="16.990.510-K"
+    estudianteBootCamp.nombre="Agustin Romero"
+    estudianteBootCamp.edad=35
+    estudianteBootCamp.telefono="+56976424587"
+
+    estudianteBootCamp.imprimirDatosEstudiante()
 
 
 }
