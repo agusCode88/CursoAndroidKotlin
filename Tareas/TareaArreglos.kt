@@ -18,16 +18,48 @@ y acepte solo enteros como entrada por teclado.
  */
 
 fun main() {
-    val tamañoArreglo = solicitarTamañoArreglo()
-    val arreglo = crearArreglo(tamañoArreglo)
+
+    val tamanioArreglo = solicitarTamañoArreglo()
+    var arreglo = crearArreglo(tamanioArreglo)
+    var opcion: Int? = null
 
     llenarArreglo(arreglo)
-    mostrarArregloInverso(arreglo)
-    mostrarArregloNormal(arreglo)
-    //mostrarSumaArreglo(arreglo)
+
+    while (opcion != 7) {
+
+        println("╔══════════════════════════════════╗")
+        println("║           MENÚ PRINCIPAL         ║")
+        println("╠══════════════════════════════════╣")
+        println("║ 1. Orden Inverso                 ║")
+        println("║ 2. Orden Normal                  ║")
+        println("║ 3. Primero y ultimo              ║")
+        println("║ 4. Sumar Todos                   ║")
+        println("║ 5. Actualizar Suma               ║")
+        println("║ 6. Eliminar elemento             ║")
+        println("║ 7. Elimina todo                  ║")
+        println("║ 8. Salir                         ║")
+        println("╚══════════════════════════════════╝")
+
+        print("Ingresa tu opción: ")
+
+        try {
+            opcion = readLine()?.toInt()
+            when (opcion) {
+                1 -> mostrarArregloInverso(arreglo)
+                2 -> mostrarArregloNormal(arreglo)
+//                3 -> mostrarPrimerYUltimo(arreglo)
+//                4 -> mostrarSumaArreglo(arreglo)
+//                5 -> actualizarValor(arreglo)
+//                6-> eliminarUnElemento(arreglo)
+//                7-> borrarTodosLosDatos(arreglo)
+                8 -> println("Hasta luego. Dale que puedes!")
+                else -> println("Ingrese una opción válida.")
+            }
+        } catch (e: Exception) {
+            println("Ingrese una opción válida.")
+        }
+    }
 }
-
-
 fun solicitarTamañoArreglo(): Int {
     var tamanio: Int? = null
     do {
