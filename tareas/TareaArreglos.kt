@@ -1,8 +1,6 @@
 package com.example.aprendiendokotlin
 
-
 /*
-
 Cree un programa en Kotlin que pregunte por pantalla la cantidad de elementos que tendrá el arreglo.
 Capture el dato de entrada y setee un arreglo de enteros del tamaño ingresado por el usuario.
 Una vez que haya creado el arreglo e indicado la cantidad de elementos ,proceda a llenar el arreglo
@@ -21,16 +19,44 @@ y acepte solo enteros como entrada por teclado.
  */
 
 
+
 fun main(args: Array<String>) {
     val tamanioArreglo = solicitarTamanioArreglo()
     val arreglo = crearArreglo(tamanioArreglo)
+    var opcion: Int? = null
 
     llenarArreglo(arreglo)
-    mostrarArregloInverso(arreglo)
-    mostrarArregloNormal(arreglo)
-    mostrarPrimerYUltimoElemento(arreglo)
-    mostrarSumaArreglo(arreglo)
-    agregarUnNuevoElementoYSumarlo(arreglo)
+
+    while (opcion != 6) {
+        println("╭───────────────────────────────────╮")
+        println("│           MENÚ PRINCIPAL          │")
+        println("├───────────────────────────────────┤")
+        println("│ 1. Orden Inverso                  │")
+        println("│ 2. Orden Normal                   │")
+        println("│ 3. Primero y Último               │")
+        println("│ 4. Sumar Todos                    │")
+        println("│ 5. Actualizar Suma                │")
+        println("│ 6. Salir                          │")
+        println("╰───────────────────────────────────╯")
+
+
+
+        print("Ingresa tu opción: ")
+        try {
+            opcion = readLine()?.toInt()
+            when (opcion) {
+                1 -> mostrarArregloInverso(arreglo)
+                2 -> mostrarArregloNormal(arreglo)
+                3 -> mostrarPrimerYUltimoElemento(arreglo)
+                4 -> mostrarSumaArreglo(arreglo)
+                5 -> agregarUnNuevoElementoYSumarlo(arreglo)
+                6 -> System.exit(0)
+                else -> println("Ingrese una opción válida.")
+            }
+        } catch (e: Exception) {
+            println("Ingrese una opción válida.")
+        }
+    }
 }
 
 fun solicitarTamanioArreglo(): Int {
@@ -71,7 +97,6 @@ fun llenarArreglo(arreglo: IntArray) {
         arreglo[i] = valor
     }
 }
-
 
 fun mostrarArregloInverso(arreglo: IntArray) {
     val arregloInverso = arreglo.copyOf().apply { reverse() }
