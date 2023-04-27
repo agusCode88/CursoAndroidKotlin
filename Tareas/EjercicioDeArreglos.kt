@@ -28,13 +28,16 @@ fun main() {
 }
 //hacer el menu
 fun mostrarMenu(): Int {
-    println("Seleccione una opción:")
-    println("1. Mostrar el contenido del arreglo en orden inverso")
-    println("2. Imprimir el contenido y su indice del arreglo en orden normal")
-    println("3. Mostrar el primer y el ultimo elemento del arreglo")
-    println("4. Sumar los elementos del arreglo y mostrar el resultado por pantalla")
-    println("5. Actualizar o agregar un nuevo valor al arreglo y mostrar la nueva suma")
-    println("0. Salir")
+    println("╔══════════════════════════════════════════════════════════════════════════════╗")
+    println("║                                ${"\u001B[4mM  E  N  Ú\u001B[0m".padEnd(34)}                    ║")
+    println("╠══════════════════════════════════════════════════════════════════════════════╣")
+    println("║1. Mostrar el contenido del arreglo en orden inverso                          ║")
+    println("║2. Imprimir el contenido y su indice del arreglo en orden normal              ║")
+    println("║3. Mostrar el primer y el ultimo elemento del arreglo                         ║")
+    println("║4. Sumar los elementos del arreglo y mostrar el resultado por pantalla        ║")
+    println("║5. Actualizar o agregar un nuevo valor al arreglo y mostrar la nueva suma     ║")
+    println("║0. Salir                                                                      ║")
+    println("╚══════════════════════════════════════════════════════════════════════════════╝")
 
     var opcion: Int? = null
     do {
