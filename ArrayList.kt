@@ -66,5 +66,4 @@ fun trabajandoConListasEnKotlin(){
 
     listaDeNombres.clear()
 
-
 }
