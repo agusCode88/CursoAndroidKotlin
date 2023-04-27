@@ -70,7 +70,7 @@ fun trabajandoConListasEnKotlin(){
     println(listaDeNombres)
 
 
-
+//listas mutables cambian en el tiempo.buscar.
 
 
 }
