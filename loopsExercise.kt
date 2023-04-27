@@ -17,7 +17,7 @@ fun main() {
             scanner.next() // Clear the scanner's buffer
         }
     }
-    val array = IntArray(size) // Create an array of integers with the specified size
+    var array = IntArray(size) // Create an array of integers with the specified size
     for (i in 0 until size) { // Loop through each element of the array
         var element = 0 // Initialize the current element to zero
         while (element == 0) { // Loop until a valid integer is entered
@@ -32,13 +32,27 @@ fun main() {
         array[i] = element // Set the current element of the array to the entered value
     }
     println()
-    println("The array you entered is:")
+    print("The array you entered is: ")
     printArray(array) // Print the array in normal order
-    println()
-    println("The array in reverse order is:")
-    printArrayInReverse(array) // Print the array in reverse order
-    println()
-    println("The sum of the array elements is: ${sumArrayElements(array)}") // Print the sum of the array elements
+    println("The first element of the array is: ${array.firstOrNull()}") // Print the first element of the array
+    println("The last element of the array is: ${array.lastOrNull()}") // Print the last element of the array
+    var sum = sumArrayElements(array) // Compute the sum of the array elements
+    println("The sum of the array elements is: $sum") // Print the sum of the array elements
+    print("Enter a new element to add to the array: ")
+    var newElement = 0 // Initialize the new element to zero
+    while (newElement == 0) { // Loop until a valid integer is entered
+        try { // Try to read an integer from the user
+            newElement = scanner.nextInt()
+        } catch (e: InputMismatchException) { // If the user did not enter an integer, print an error message
+            println("Error: You must enter a valid integer.")
+            scanner.next() // Clear the scanner's buffer
+        }
+    }
+    array = array.plus(newElement) // Set the last element of the array to the new value
+    sum += newElement // Add the new element to the sum
+    print("The array with the new element is: ")
+    printArray(array) // Print the updated array
+    println("The sum of the array elements with the new element is: $sum") // Print the updated sum
 }
 
 fun printArray(array: IntArray) { // Function to print the array in normal order
@@ -62,3 +76,8 @@ fun sumArrayElements(array: IntArray): Int { // Function to sum the elements of 
     }
     return sum // Return the sum
 }
+
+//fun arrayListExercise() {
+//    val arrayListOfStrings = arrayListOf("apple", "banana", "cherry", "date", "elderberry")
+//    println(arrayListOfStrings)
+//}
