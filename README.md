@@ -81,6 +81,10 @@ Clase 5 - Mapas o Diccionario de Datos
 * Buscar un elemento del mapa por valor 
 * Buscar un elemento con la funcion contains
 
+Actividad Practica: https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaMapas.kt
+
+
+
 
 
 
