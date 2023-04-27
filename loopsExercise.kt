@@ -34,6 +34,8 @@ fun main() {
     println()
     print("The array you entered is: ")
     printArray(array) // Print the array in normal order
+    print("The array in reversed order is: ")
+    printArrayInReverse(array)
     println("The first element of the array is: ${array.firstOrNull()}") // Print the first element of the array
     println("The last element of the array is: ${array.lastOrNull()}") // Print the last element of the array
     var sum = sumArrayElements(array) // Compute the sum of the array elements
@@ -76,6 +78,14 @@ fun sumArrayElements(array: IntArray): Int { // Function to sum the elements of 
     }
     return sum // Return the sum
 }
+//
+//fun printArrayInReverse(array: Array<Int>) {
+//    val reversedArray = array.reversed()
+//
+//    for (element in reversedArray) {
+//        println(element)
+//    }
+//}
 
 //fun arrayListExercise() {
 //    val arrayListOfStrings = arrayListOf("apple", "banana", "cherry", "date", "elderberry")
