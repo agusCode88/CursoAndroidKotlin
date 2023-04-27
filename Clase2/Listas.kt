@@ -18,7 +18,7 @@ fun trabajandoConListasEnKotlin(){
     var nombrePersona6: String = "Manuel"
 
     println(listaDeNombres)
-//para agregar nombres a la lista
+//para agregar elementos a la lista
     listaDeNombres.add(nombrePersona1)
     listaDeNombres.add(nombrePersona2)
     listaDeNombres.add(nombrePersona3)
@@ -41,7 +41,36 @@ fun trabajandoConListasEnKotlin(){
     var nombreObtenido: String = listaDeNombres[2]
     println(nombreObtenido)
 
+    //Actualizar elementos de la Lista
     listaDeNombres[2] = "He actualizado Clara"
     println(listaDeNombres)
+
+
+    var tamanioLista: Int = listaDeNombres.size // solo toma el tamaño
+    var tamanioLista2: Int = listaDeNombres.count() // le puedes poner una condición
+
+    println(tamanioLista)
+    println(tamanioLista2)
+
+    listaDeNombres.forEach{
+        println(it)}
+
+    var saberElPrimerNombre: String = listaDeNombres.first()
+    var saberElUltimoNombre: String = listaDeNombres.last()
+
+    println("Este es el primero de la lista ${saberElPrimerNombre}")
+    println("Este es el último de la lista ${saberElUltimoNombre}")
+
+    //Para remover un elemento de la lista
+    listaDeNombres.removeAt(2)
+    println(listaDeNombres)
+
+    //Para borrar la lista completa
+    listaDeNombres.clear()
+    println(listaDeNombres)
+
+
+
+
 
 }
