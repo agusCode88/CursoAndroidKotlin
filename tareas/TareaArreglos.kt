@@ -52,9 +52,9 @@ fun main() {
                 2 -> mostrarArregloNormal(arreglo)
                 3 -> mostrarPrimerYUltimo(arreglo)
                 4 -> mostrarSumaArreglo(arreglo)
-                5 -> actualizarValor(arreglo)
-                6-> eliminarUnElemento(arreglo)
-                7-> borrarTodosLosDatos(arreglo)
+//                5 -> actualizarValor(arreglo)
+//                6-> eliminarUnElemento(arreglo)
+//                7-> borrarTodosLosDatos(arreglo)
                 8 -> println("Hasta luego. Dale que puedes!")
                 else -> println("Ingrese una opción válida.")
             }
@@ -140,55 +140,55 @@ fun mostrarSumaArreglo(arreglo: IntArray){
     println("La suma de los numeros es: $suma")
 
 }
-fun actualizarValor(arreglo: IntArray){
-
-    var posicionNumero:Int? = 0
-    var numeroActualizado:Int? =0
-    var sumaActualizada=0
-
-    do {
-        println("Ingrese la posicion que deseas actualizar:")
-        try {
-            posicionNumero = readLine()?.toInt()
-            println("Ingrese el numero para actualizar:")
-            numeroActualizado = readLine()?.toInt()
-            if ( posicionNumero == null || numeroActualizado == null) throw Exception()
-        } catch (e: Exception) {
-            println("Ingrese un número válido.")
-        }
-    } while (posicionNumero == null)
-
-    if (posicionNumero < arreglo.size) {
-        arreglo[posicionNumero] = numeroActualizado!!
-        var sumaActualizada = arreglo.sum()
-        println("La nueva suma de los valores es: $sumaActualizada")
-        println("Arreglo actualizado: ${arreglo.joinToString()}")
-    } else {
-        println("La posición que desea actualizar no existe en el arreglo.")
-    }
-
-}
-fun eliminarUnElemento(arreglo: IntArray){
-
-    println("Ingrese la posicion que deseas actualizar:")
-    try {
-        val num = readLine()?.toInt() ?: 0
-        val copiaArreglo = IntArray(arreglo.size - 1) {
-            //Si el indice es menor al numero ingresado , se copia el numero en el mismo indice
-            // si no , se copia el elemento en el indice posterior
-                i -> if (i < num) arreglo[i] else arreglo[i + 1]
-        }
-        println("El número ${arreglo[num]} ha sido eliminado. Números actuales: ${copiaArreglo.contentToString()}")
-    } catch (e: Exception) {
-        println("Ingrese un número válido.")
-    }
-
-}
-fun borrarTodosLosDatos(arreglo: IntArray){
-
-    for (num in arreglo.indices){
-        arreglo[num]=0
-    }
-    print(arreglo.contentToString())
-
-}
+//fun actualizarValor(arreglo: IntArray){
+//
+//    var posicionNumero:Int? = 0
+//    var numeroActualizado:Int? =0
+//    var sumaActualizada=0
+//
+//    do {
+//        println("Ingrese la posicion que deseas actualizar:")
+//        try {
+//            posicionNumero = readLine()?.toInt()
+//            println("Ingrese el numero para actualizar:")
+//            numeroActualizado = readLine()?.toInt()
+//            if ( posicionNumero == null || numeroActualizado == null) throw Exception()
+//        } catch (e: Exception) {
+//            println("Ingrese un número válido.")
+//        }
+//    } while (posicionNumero == null)
+//
+//    if (posicionNumero < arreglo.size) {
+//        arreglo[posicionNumero] = numeroActualizado!!
+//        var sumaActualizada = arreglo.sum()
+//        println("La nueva suma de los valores es: $sumaActualizada")
+//        println("Arreglo actualizado: ${arreglo.joinToString()}")
+//    } else {
+//        println("La posición que desea actualizar no existe en el arreglo.")
+//    }
+//
+//}
+//fun eliminarUnElemento(arreglo: IntArray){
+//
+//    println("Ingrese la posicion que deseas actualizar:")
+//    try {
+//        val num = readLine()?.toInt() ?: 0
+//        val copiaArreglo = IntArray(arreglo.size - 1) {
+//            //Si el indice es menor al numero ingresado , se copia el numero en el mismo indice
+//            // si no , se copia el elemento en el indice posterior
+//                i -> if (i < num) arreglo[i] else arreglo[i + 1]
+//        }
+//        println("El número ${arreglo[num]} ha sido eliminado. Números actuales: ${copiaArreglo.contentToString()}")
+//    } catch (e: Exception) {
+//        println("Ingrese un número válido.")
+//    }
+//
+//}
+//fun borrarTodosLosDatos(arreglo: IntArray){
+//
+//    for (num in arreglo.indices){
+//        arreglo[num]=0
+//    }
+//    print(arreglo.contentToString())
+//
+//}

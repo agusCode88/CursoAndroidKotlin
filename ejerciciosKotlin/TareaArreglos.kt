@@ -8,9 +8,11 @@ package ejerciciosKotlin
 
 Una vez que ya tenga con contenido el arreglo, crear 3 funcionalidades de este programa:
 
-1)Mostrar el contenido del arreglo en orden inverso
-2)Imprimir el contenido del arreglo en orden normal
-3)Sumar los elementos del arreglo y mostrar el resultado por pant
+1)Mostrar el contenido del arreglo en orden inverso.
+2)Imprimir el contenido y su indice del arreglo en orden normal.
+3)Mostrar el primer y el ultimo elemento del arreglo.
+4)Sumar los elementos del arreglo y mostrar el resultado por pantalla
+5) Actualizar o agregar un nuevo valor al arreglo y mostrar la nueva suma
 
 Considere hacer las validaciones correspondientes para que el programa no se caiga
 y acepte solo enteros como entrada por teclado.
@@ -21,9 +23,10 @@ fun main() {
     val arreglo = crearArreglo(tamañoArreglo)
 
     llenarArreglo(arreglo)
-    //mostrarArregloNormal(arreglo)
-    //mostrarArregloInverso(arreglo)
-    //mostrarSumaArreglo(arreglo)
+    mostrarArregloInverso(arreglo)
+    mostrarArregloNormal(arreglo)
+    mostrarPrimerYUltimo(arreglo)
+    mostrarSumaArreglo(arreglo)
 }
 
 // Esta función se encarga de solicitar al usuario el tamaño del arreglo.
@@ -73,8 +76,36 @@ fun llenarArreglo(arreglo: IntArray) {
         // Se asigna el valor ingresado en la posición actual del arreglo.
         arreglo[valor] = numero
     }
-    // Se imprime un mensaje de agradecimiento una vez que se han ingresado todos los valores del arreglo.
-    println("Gracias por ingresar los valores del arreglo.")
 }
+//1)Mostrar el contenido del arreglo en orden inverso
+fun mostrarArregloInverso(arreglo: IntArray){
+    println("Los valores en orden invertido son los siguientes:")
+     for (valor in arreglo.size -1 downTo 0) {
+        println(arreglo[valor])
+         }
+}
+//2)Imprimir el contenido y su indice del arreglo en orden normal.
+fun mostrarArregloNormal(arreglo: IntArray) {
+    println("Los valores en orden son los siguientes:")
+    for (valor in arreglo) {
+        println("$valor")
+
+    }
+}
+//3)Mostrar el primer y el ultimo elemento del arreglo.
+fun mostrarPrimerYUltimo(arreglo: IntArray) {
+    var primerValorArreglo: Int = arreglo.first()
+    var ultimoValorArreglo: Int = arreglo.last()
+    println("El primer y último valor de la lista son los siguientes: $primerValorArreglo y $ultimoValorArreglo ")
+}
+//4)Sumar los elementos del arreglo y mostrar el resultado por pantalla
+fun mostrarSumaArreglo(arreglo: IntArray){
+    var suma = 0
+    for (valor in arreglo) {
+        suma += valor
+    }
+    println("La suma de los valores es: $suma")
+
+        }
 
 

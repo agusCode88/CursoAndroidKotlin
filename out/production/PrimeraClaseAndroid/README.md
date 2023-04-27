@@ -40,7 +40,7 @@ https://developer.android.com/codelabs/basic-android-kotlin-compose-kotlin-funda
 <br>Clase 3 - Ciclos y Arrays en Kotlin<br/> 
 
 * Concepto de Nulabilidad en Kotlin
-* Concepto de array 
+* Concepto de Array 
 * Recorriendo Arrays con ciclos 
 * Ciclo While y Do- While
 * Ciclo FOR 
@@ -48,5 +48,43 @@ https://developer.android.com/codelabs/basic-android-kotlin-compose-kotlin-funda
 * Actividad Practica : 
 
 https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaArreglos.kt
+
+26/04/2023
+Clase 4 - Arreglos y Listas de arreglos
+
+* Recorriendo un Array con for
+* Uso del while y do while
+* Crear una lista de Datos
+* Accediendo a los datos de la lista
+* Modificando datos de la lista
+* Eliminacion de Datos de una lista 
+* Funcionalidades especiales de las listas
+
+
+********  Apoyo material de estudio : https://developer.android.com/codelabs/basic-android-kotlin-collections?hl=es-419#0
+
+Actividad Practica: https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaArreglos.kt
+
+
+27/04/2023
+Clase 5 - Mapas o Diccionario de Datos 
+
+* Creando Diccionario o Mapa de datos
+* Mapas Mutables e Inmutables
+* Llenar un Mapa de datos
+* Actualizar un valor en el mapa
+* Agregar un nuevo valor al mapa
+* Mostrar llave y valor de cada elemento de un mapa 
+* Buscar un elemento en el mapa
+* Borrar elemento de un mapa 
+* Buscar un elemento del mapa por clave 
+* Buscar un elemento del mapa por valor 
+* Buscar un elemento con la funcion contains
+
+Actividad Practica: https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaMapas.kt
+
+
+
+
 
 
