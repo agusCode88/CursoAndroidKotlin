@@ -45,6 +45,8 @@ fun trabajandoConListasEnKotlin(){
     listaDeNombres[2] = "He actualizado Maria"
     println(listaDeNombres)
 
+    //Funciones espciales de las listas
+
     var tamanioLista: Int = listaDeNombres.size
     var tamanioLista2: Int = listaDeNombres.count()
 
