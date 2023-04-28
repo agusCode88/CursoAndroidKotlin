@@ -95,7 +95,7 @@ Clase 6 - POO - Programacion orientada a Objetos en Kotlin
 *Lista de Objetos 
 *Mapaas de Datos con objetos
 
-****Material de apoyo : https://developer.android.com/codelabs/basic-android-kotlin-compose-classes-and-objects?hl=es-419#0
+Material de apoyo : https://developer.android.com/codelabs/basic-android-kotlin-compose-classes-and-objects?hl=es-419#0
 
 
 
