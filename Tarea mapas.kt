@@ -141,10 +141,10 @@ fun main() {
                 var opcionMenuOrdenar: Int? = null
                 do {
                     opcionMenuOrdenar = readLine()?.toIntOrNull()
-                    if (opcionMenuOrdenar == null || opcionMenuOrdenar !in 1..6) {
+                    if (opcionMenuOrdenar == null || opcionMenuOrdenar !in 1..5) {
                         println("Opción inválida. Inténtalo de nuevo.")
                     }
-                } while (opcionMenuOrdenar == null || opcionMenuOrdenar !in 1..6)
+                } while (opcionMenuOrdenar == null || opcionMenuOrdenar !in 1..5)
 
 
                 when (opcionMenuOrdenar) {
