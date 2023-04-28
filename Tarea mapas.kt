@@ -215,7 +215,16 @@ fun main() {
 
                 when (opcionMenuActualizar) {
                     1 -> {
-                        println("Aquí va la funcion actualizar edad")
+                        print("Ingresa el nombre de la persona que deseas actualizar la edad: ")
+                        val nombre = readLine()?.toString() ?: ""
+                        if (estudiantes.containsKey(nombre)) {
+                            print("Ingresa la nueva edad de la persona: ")
+                            val edad = readLine()?.toInt() ?: 0
+                            estudiantes[nombre] = edad
+                            println("La edad de $nombre ha sido actualizada correctamente.")
+                        } else {
+                            println("La persona $nombre no se encontró en la lista.")
+                        }
 
                     }
 
@@ -253,56 +262,6 @@ fun main() {
                     }
                 }
                 println("Presiona ENTER para volver al menú actualizar.")
-                readLine()
-            } while (true)
-
-            6 -> do {
-
-                println("╔══════════════════════════════════════════════╗")
-                println("║      MENÚ ARCHIVO ESTUDIANTES ANDROID        ║")
-                println("╠══════════════════════════════════════════════╣")
-                println("║ 1. Guardar la lista de personas en un archivo║") //*Guardar la lista de personas en un archivo y cargarla al iniciar el programa.
-                println("║ 2. Cargar la lista de personas desde archivo ║") //*Guardar la lista de personas en un archivo y cargarla al iniciar el programa.
-                println("║ 3. Validar entrada de usuario                ║") //*Agregar validación de entrada de usuario para evitar errores (por ejemplo, asegurarse de que la edad ingresada sea un número entero válido).
-                println("║ 4. Volver al menú principal                  ║") //Volver al menú
-                println("║ 5. Salir                                     ║") //Salir
-                println("╚══════════════════════════════════════════════╝")
-
-                print("Ingresa tu opción: ")
-                var opcionMenuArchivo: Int? = null
-                do {
-                    opcionMenuArchivo = readLine()?.toIntOrNull()
-                    if (opcionMenuArchivo == null || opcionMenuArchivo !in 1..5) {
-                        println("Opción inválida. Inténtalo de nuevo.")
-                    }
-                } while (opcionMenuArchivo == null || opcionMenuArchivo !in 1..5)
-
-
-                when (opcionMenuArchivo) {
-                    1 -> {
-                        println("Aqui va la funcion de guardar")
-
-                    }
-
-                    2 -> {
-                        println("Aqui va la funcion de cargar")
-
-                    }
-
-                    3 -> {
-                        println("Aqui va la funcion de validar")
-
-                    }
-
-                    4 -> break
-
-                    5 -> return
-
-                    else -> {
-                        println("Opción inválida.")
-                    }
-                }
-                println("Presiona ENTER para volver al menú archivo.")
                 readLine()
             } while (true)
 
