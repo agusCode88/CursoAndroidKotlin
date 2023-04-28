@@ -1,5 +1,7 @@
 package com.example.aprendiendokotlin.tareas
 
+import com.sun.jdi.Value
+
 /*
 
 Necesario: Llenar la lista de estudiantes
@@ -19,6 +21,7 @@ Ideas:
 
 
 fun main() {
+    var opcion:Int?= null
     val estudiante = mutableMapOf<String, Int>(
         "Bárbara" to 29,
         "Luis" to 24,
@@ -34,18 +37,17 @@ fun main() {
         "Leo" to 32,
         "Sergio" to 32) // Diccionario de Esudiante (nombre y edad)
 
-    val mapaOrdenado = estudiante.toSortedMap(compareByDescending {})
-
-    println(mapaOrdenado)
 
 
-    do {
+
+    while (opcion != 7){
         println("╔══════════════════════════════════╗")
         println("║       MENÚ ESTUDIANTES ANDROID   ║")
         println("╠══════════════════════════════════╣")
         println("║ 1. Agregar estudiante            ║")
         println("║ 2. Mostrar lista de estudiantes  ║")
         println("║ 3. Eliminar estudiante           ║")
+        println("║ 4. mostrar mayor y menor edad    ║")
         println("║ 7. Salir                         ║")
         println("╚══════════════════════════════════╝")
 
@@ -82,19 +84,21 @@ fun main() {
                 }
             }
             4-> {
-                var AlumnoMayor=
-                println()
+                var estudianteMayor = estudiante.maxOf { it.value }
+                var estudianteMenor = estudiante.minOf { it.value }
 
+                println("El estudiante de mayor edad es: $estudianteMayor")
+                println("El estudiante de menor edad es: $estudianteMenor")
             }
-
             7 -> {
                 println("Saliendo del programa...")
+                break
             }
             else -> {
                 println("Opción inválida. Inténtalo de nuevo.")
             }
         }
-    } while (opcion != 4)
+    }
 
 
 }
