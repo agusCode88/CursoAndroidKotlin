@@ -19,7 +19,24 @@ Ideas:
 
 
 fun main() {
-    val estudiante = mutableMapOf<String, Int>() // Diccionario de Esudiante (nombre y edad)
+    val estudiante = mutableMapOf<String, Int>(
+        "Bárbara" to 29,
+        "Luis" to 24,
+        "Lautaro" to 33,
+        "Consuelo" to 32,
+        "Beatríz" to 28,
+        "David" to 54,
+        "Javier" to 32,
+        "José" to 32,
+        "Steven" to 37,
+        "Moises" to 28,
+        "Javiera" to 33,
+        "Leo" to 32,
+        "Sergio" to 32) // Diccionario de Esudiante (nombre y edad)
+
+    val mapaOrdenado = estudiante.toSortedMap(compareByDescending {})
+
+    println(mapaOrdenado)
 
 
     do {
@@ -29,7 +46,7 @@ fun main() {
         println("║ 1. Agregar estudiante            ║")
         println("║ 2. Mostrar lista de estudiantes  ║")
         println("║ 3. Eliminar estudiante           ║")
-        println("║ 4. Salir                         ║")
+        println("║ 7. Salir                         ║")
         println("╚══════════════════════════════════╝")
 
         print("Ingresa tu opción: ")
@@ -64,7 +81,13 @@ fun main() {
                     println("La persona $nombre no se encontró en la lista.")
                 }
             }
-            4 -> {
+            4-> {
+                var AlumnoMayor=
+                println()
+
+            }
+
+            7 -> {
                 println("Saliendo del programa...")
             }
             else -> {
@@ -72,4 +95,7 @@ fun main() {
             }
         }
     } while (opcion != 4)
+
+
 }
+//*Agregar una función para mostrar la persona más joven y la persona más vieja en la lista.
