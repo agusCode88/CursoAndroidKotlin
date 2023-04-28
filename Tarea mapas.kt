@@ -1,4 +1,4 @@
-@file:Suppress("UNUSED_EXPRESSION")
+@file:Suppress("UNUSED_EXPRESSION", "UNREACHABLE_CODE")
 
 package com.example.aprendiendokotlin
 
@@ -21,6 +21,9 @@ Ideas:
 
 
 fun main() {
+
+    class Estudiante(val nombre: String, var edad: Int, var direccion: String?, var telefono: String?)
+
     val estudiante = mutableMapOf<String, Int>() // Diccionario de Esudiante (nombre y edad)
 
 
@@ -44,9 +47,15 @@ fun main() {
                 val nombre = readLine()?.toString() ?: ""
                 print("Ingresa la edad de la persona: ")
                 val edad = readLine()?.toInt() ?: 0
-                estudiante[nombre] = edad
+                print("Ingresa la dirección de la persona (opcional): ")
+                val direccion = readLine()?.toString()
+                print("Ingresa el número de teléfono de la persona (opcional): ")
+                val telefono = readLine()?.toString()
+                val est = Estudiante(nombre, edad, direccion, telefono)
+                estudiante[nombre] = est.edad
                 println("La persona $nombre ha sido agregada correctamente.")
             }
+
             2 -> {
                 if (estudiante.isEmpty()) {
                     println("No hay personas en la lista.")
@@ -70,22 +79,24 @@ fun main() {
             4 -> {
                 println("Saliendo del programa...")
             }
+
+
+            6 -> {
+                print("Ingresa el nombre de la persona que deseas actualizar la edad: ")
+                val nombre = readLine()?.toString() ?: ""
+                if (estudiante.containsKey(nombre)) {
+                    print("Ingresa la nueva edad de la persona: ")
+                    val edad = readLine()?.toInt() ?: 0
+                    estudiante[nombre] = edad
+                    println("La edad de $nombre ha sido actualizada correctamente.")
+                } else {
+                    println("La persona $nombre no se encontró en la lista.")
+                }
+            }
+
             else -> {
                 println("Opción inválida. Inténtalo de nuevo.")
             }
         }
-
-        5 -> {
-            print("Ingresa el nombre de la persona cuya edad deseas actualizar: ")
-            val nombre = readLine()?.toString() ?: ""
-            if (estudiante.containsKey(nombre)) {
-                print("Ingresa la nueva edad de la persona: ")
-                val edad = readLine()?.toInt() ?: 0
-                estudiante[nombre] = edad
-                println("La edad de la persona $nombre ha sido actualizada correctamente.")
-            } else {
-                println("La persona $nombre no se encontró en la lista.")
-
     } while (opcion != 4)
-
-}}
+}
