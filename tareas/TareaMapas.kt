@@ -29,11 +29,12 @@ fun main() {
         println("║ 1. Agregar estudiante            ║")
         println("║ 2. Mostrar lista de estudiantes  ║")
         println("║ 3. Eliminar estudiante           ║")
+        println("║ 6. Total de estudiantes          ║ ")
         println("║ 7. Salir                         ║")
         println("╚══════════════════════════════════╝")
 
         print("Ingresa tu opción: ")
-        val opcion = readLine()?.toInt() ?: 0
+        val opcion = readLine()?.toIntOrNull() ?: 0
 
         when (opcion) {
             1 -> {
@@ -64,6 +65,8 @@ fun main() {
                     println("La persona $nombre no se encontró en la lista.")
                 }
             }
+            6-> {
+                mostrarDeCantidadPersonas(estudiante)}
             7 -> {
                 println("Saliendo del programa...")
             }
@@ -73,3 +76,9 @@ fun main() {
         }
     } while (opcion != 4)
 }
+fun mostrarDeCantidadPersonas(estudiante: MutableMap<String, Int>) {
+    val cantidadDePersonas = estudiante.size
+    println("Hay $cantidadDePersonas estudiantes Android.")
+}
+
+
