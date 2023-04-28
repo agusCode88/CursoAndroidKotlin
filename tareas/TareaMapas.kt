@@ -29,7 +29,7 @@ fun main() {
         println("║ 1. Agregar estudiante            ║")
         println("║ 2. Mostrar lista de estudiantes  ║")
         println("║ 3. Eliminar estudiante           ║")
-        println("║ 4. Salir                         ║")
+        println("║ 7. Salir                         ║")
         println("╚══════════════════════════════════╝")
 
         print("Ingresa tu opción: ")
@@ -64,7 +64,7 @@ fun main() {
                     println("La persona $nombre no se encontró en la lista.")
                 }
             }
-            4 -> {
+            7 -> {
                 println("Saliendo del programa...")
             }
             else -> {
