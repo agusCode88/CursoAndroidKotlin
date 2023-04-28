@@ -22,10 +22,8 @@ Ideas:
 
 fun main() {
 
-    class Estudiante(val nombre: String, var edad: Int, var direccion: String?, var telefono: String?)
-
     val estudiante = mutableMapOf<String, Int>() // Diccionario de Esudiante (nombre y edad)
-
+    class Estudiante(val nombre: String, var edad: Int, var direccion: String?, var telefono: String?)
 
     do {
         println("╔══════════════════════════════════╗")
@@ -34,8 +32,8 @@ fun main() {
         println("║ 1. Agregar estudiante            ║")
         println("║ 2. Mostrar lista de estudiantes  ║")
         println("║ 3. Eliminar estudiante           ║")
-        println("║ 6. actualizar la edad            ║")
-        println("║ 4. Salir                         ║")
+        println("║ 4. actualizar la edad            ║")
+        println("║ 5. Salir                         ║")
         println("╚══════════════════════════════════╝")
 
         print("Ingresa tu opción: ")
@@ -98,5 +96,5 @@ fun main() {
                 println("Opción inválida. Inténtalo de nuevo.")
             }
         }
-    } while (opcion != 4)
+    } while (opcion != 5)
 }
