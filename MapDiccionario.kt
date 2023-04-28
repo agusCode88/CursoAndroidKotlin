@@ -2,8 +2,8 @@ package com.example.aprendiendokotlin
 
 fun main(){
 
-    //mapsEnKotlin()
-    orientacionAObjetos()
+    mapsEnKotlin()
+    //orientacionAObjetos()
 }
 
 /*
@@ -34,6 +34,25 @@ fun mapsEnKotlin(){
 
     mapaDeDatos2 = mutableMapOf("Id1" to 1 ,"Id2" to 234 ,"Id4" to 569 ,"Id1" to 20 )
 
+    var personas = mutableMapOf<String,Any>(
+
+        "Agus" to 34,
+        "Consu" to 30,
+        "Matias" to 20
+    )
+
+    var contactos = mutableMapOf<String,Pair<String,String>>(
+        "Agus" to Pair("976424587","Chacabuco 340"),
+        "Consu" to Pair("976424587","Chacabuco 340"),
+        "Mati" to Pair("976424587","Chacabuco 340")
+    )
+
+    personas["Agus"]= listOf("976424587","Chacabuco 340")
+
+
+    println(personas)
+
+
     //Actualizar un valor del mapa
     mapaDeDatos2["Id5"] = 455
     mapaDeDatos2["Id5"] = 4566
@@ -45,6 +64,7 @@ fun mapsEnKotlin(){
 
     // Acceder a datos de un mapa
     println(mapaDeDatos2["Id1"])
+
 
     // Borrar elemento del mapa
     mapaDeDatos2.remove("Id2")
@@ -59,17 +79,26 @@ fun mapsEnKotlin(){
 
 fun orientacionAObjetos(){
 
-    var estudianteBootCamp = Estudiante()
+    var estudianteBootCamp = Estudiante("16.990.510-K","Agustin Romero",34,"+56976424587") // Constructor implicito
+    var estudianteBootcamp2 = Estudiante()
+    var listaEstudiantes:MutableList<Estudiante> = mutableListOf()
+
     // En java
     //Estudiante estudianteBootcamp = new Estudiante
     
-    // Llenado de datos
-    estudianteBootCamp.rut="16.990.510-K"
-    estudianteBootCamp.nombre="Agustin Romero"
-    estudianteBootCamp.edad=35
-    estudianteBootCamp.telefono="+56976424587"
+    // Llenado de datos estudiante 2
+    estudianteBootcamp2.rut="11.111.111-1"
+    estudianteBootcamp2.nombre="Agus Code"
+    estudianteBootcamp2.edad=36
+    estudianteBootcamp2.telefono="+56976424587"
 
-    estudianteBootCamp.imprimirDatosEstudiante()
+    listaEstudiantes.add(estudianteBootCamp)
+    listaEstudiantes.add(estudianteBootcamp2)
 
+    for (estudiante in listaEstudiantes){
+        println(estudiante.nombre)
+        println(estudiante.edad)
+        estudiante.imprimirDatosEstudiante()
+    }
 
 }
