@@ -25,19 +25,21 @@ fun main() {
 
 
 fun ingresarEstudiante() {
-    var x = 1
-    var exit = "y"
+
+    var x = 1  //Contador de estudiantes
+    var exit = "y"  //Opcion de salida
+
     while (exit == "y") {
-        print("\nIngresa el nombre de la persona ${x} --> ")
+        print("\nIngresa el nombre del estudiante ${x} --> ")
         val nombre = readLine().toString().uppercase()
-        if (!nombre.matches(Regex("[a-zA-Z\\s]+"))) {
+        if (!nombre.matches(Regex("[a-zA-Z][a-zA-Z\\s]*"))) {
             println("Nombre ingresado no valido, intentelo")
             continue
         }
-        var edadFinal: Int? = null
+
+    var edadFinal: Int? = null
         while (edadFinal == null) {
-            print("Ingresa la edad de la persona --> ")
-            val edad: String = readLine().toString()
+            print("Ingresa la edad de la persona --> "); val edad: String = readLine().toString()
             if (edad.matches(Regex("\\d+"))) {
                 edadFinal = edad.toInt()
             } else {
@@ -45,7 +47,7 @@ fun ingresarEstudiante() {
             }
         }
         estudiante[nombre] = edadFinal
-        println("La persona $nombre ha sido agregada correctamente.")
+        println("Él/La estudiante $nombre ha sido agregado/a correctamente.")
         x++
         do {
             print("¿Desea seguir? --> y/n ")
