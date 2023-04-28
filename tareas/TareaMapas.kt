@@ -78,7 +78,7 @@ fun main() {
 }
 fun mostrarDeCantidadPersonas(estudiante: MutableMap<String, Int>) {
     val cantidadDePersonas = estudiante.size
-    println("Hay $cantidadDePersonas estudiantes Android.")
+    println("Hay $cantidadDePersonas estudiantes  Android.")
 }
 
 
