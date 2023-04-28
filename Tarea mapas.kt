@@ -78,7 +78,6 @@ fun main() {
                 println("Saliendo del programa...")
             }
 
-
             6 -> {
                 print("Ingresa el nombre de la persona que deseas actualizar la edad: ")
                 val nombre = readLine()?.toString() ?: ""
