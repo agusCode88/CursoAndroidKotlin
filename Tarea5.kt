@@ -6,13 +6,13 @@ Necesario: Llenar la lista de estudiantes
 
 Ideas:
 
-*Ordenar la lista de personas por nombre o por edad.
-*Permitir que el usuario busque una persona por nombre o por edad.
+//Ordenar la lista de personas por nombre o por edad.
+//Permitir que el usuario busque una persona por nombre o por edad.
 *Guardar la lista de personas en un archivo y cargarla al iniciar el programa.
 //Agregar validación de entrada de usuario para evitar errores (por ejemplo, asegurarse de que la edad ingresada sea un número entero válido).
 *Agregar una función para mostrar la persona más joven y la persona más vieja en la lista.
 *Permitir al usuario actualizar la edad de una persona existente.
-*Agregar una función para mostrar la cantidad total de personas en la lista.
+//Agregar una función para mostrar la cantidad total de personas en la lista.
 *Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
  */
 
@@ -88,7 +88,11 @@ fun menu(){
         println("║ 1. Agregar estudiante            ║")
         println("║ 2. Mostrar lista de estudiantes  ║")
         println("║ 3. Eliminar estudiante           ║")
-        println("║ 4. Salir                         ║")
+        println("║ 4. Ordenar por nombre            ║")
+        println("║ 5. Ordenar por edad              ║")
+        println("║ 6. Buscar por nombre o edad      ║")
+        println("║ 7. Mostrar cantidad estudiantes  ║")
+        println("║ 8. Salir                         ║")
         println("╚══════════════════════════════════╝")
 
         print("Ingresa tu opción: ")
@@ -105,7 +109,19 @@ fun menu(){
                 "3" -> {
                     eliminarEstudiante()
                 }
-                "4" -> {
+                "4" ->{
+                    ordenarNombre()
+                }
+                "5" ->{
+                    ordenarEdad()
+                }
+                "6" -> {
+                    buscar()
+                }
+                "7" ->{
+                    mostrarAlumnos()
+                }
+                "8" -> {
                     println("Saliendo del programa...")
                 }
                 else -> {
@@ -115,5 +131,64 @@ fun menu(){
         }else{
             println("Dato ingresado no valido")
         }
-    } while (opcion != "4")
+    } while (opcion != "8")
+}
+
+
+fun mostrarAlumnos() {
+
+    var total : Int = 0
+
+    for (i in estudiante){
+
+        total++
+    }
+    println("La cantidad total de estudiantes --> $total")
+}
+fun ordenarNombre() {
+    val listaOrdenadaPorNombre = estudiante.toList().sortedBy { it.first }
+    println("Lista ordenada por nombre:")
+    listaOrdenadaPorNombre.forEach { (name, age) ->
+        println("- $name ($age años)")
+    }
+}
+
+fun ordenarEdad() {
+    val listaOrdenadaPorEdad = estudiante.toList().sortedBy { it.second }
+    println("Lista ordenada por edad:")
+    listaOrdenadaPorEdad.forEach { (name, age) ->
+        println("- $name ($age años)")
+    }
+}
+
+fun buscar(){
+    print("Ingresa el criterio de búsqueda (nombre o edad): ")
+    val criterio = readLine()?.toString() ?: ""
+    when (criterio) {
+        "nombre" -> {
+            print("Ingresa el nombre de la persona que deseas buscar: ")
+            val nombre = readLine()?.toString() ?: ""
+            if (estudiante.containsKey(nombre)) {
+                println("La persona $nombre tiene ${estudiante[nombre]} años.")
+            } else {
+                println("La persona $nombre no se encontró en la lista.")
+            }
+        }
+        "edad" -> {
+            print("Ingresa la edad de la persona que deseas buscar: ")
+            val edad = readLine()?.toInt() ?: 0
+            val nombres = estudiante.filterValues { it == edad }.keys
+            if (nombres.isNotEmpty()) {
+                println("Las personas con $edad años son:")
+                nombres.forEach { nombre ->
+                    println("- $nombre")
+                }
+            } else {
+                println("No hay personas en la lista con $edad años.")
+            }
+        }
+        else -> {
+            println("Criterio de búsqueda inválido.")
+        }
+    }
 }
