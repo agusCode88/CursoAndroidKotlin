@@ -35,18 +35,17 @@ fun main() {
         println("║ 3. Buscar estudiante               ║") //Permitir que el usuario busque una persona por nombre o por edad.
         println("║ 4. Ordenar lista de estudiantes    ║") //*Ordenar la lista de personas por nombre o por edad.
         println("║ 5. Actualizar estudiantes          ║") // *Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
-        println("║ 6. Ver archivo de estudiantes      ║") //*Guardar la lista de personas en un archivo y cargarla al iniciar el programa.
-        println("║ 7. Salir                           ║")
+        println("║ 6. Salir                           ║")
         println("╚════════════════════════════════════╝")
 
         print("Ingresa tu opción: ")
         var opcionMenuPrincipal: Int? = null
         do {
             opcionMenuPrincipal = readLine()?.toIntOrNull()
-            if (opcionMenuPrincipal == null || opcionMenuPrincipal !in 1..7) {
+            if (opcionMenuPrincipal == null || opcionMenuPrincipal !in 1..6) {
                 println("Opción inválida. Inténtalo de nuevo.")
             }
-        } while (opcionMenuPrincipal == null || opcionMenuPrincipal !in 1..7)
+        } while (opcionMenuPrincipal == null || opcionMenuPrincipal !in 1..6)
 
 
         when (opcionMenuPrincipal) {
