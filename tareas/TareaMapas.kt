@@ -31,7 +31,7 @@ fun main() {
                 print("Ingresa el nombre de la persona: ")
                 val nombre = readLine()?.toString() ?: ""
                 print("Ingresa la edad de la persona: ")
-                val edad = readLine()?.toInt() ?: 0
+                val edad = readLine()?.toIntOrNull() ?: 0
                 estudiante[nombre] = edad
                 println("La persona $nombre ha sido agregada correctamente.")
             }
