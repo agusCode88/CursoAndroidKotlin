@@ -19,11 +19,11 @@ Ideas:
 
 
 fun main() {
-    val estudiantes = mutableMapOf<String, Int>() // Diccionario de Estudiantes (nombre y edad)
+    val estudiantes = mutableMapOf<String, MutableList<Int>>()// Diccionario de Estudiantes (nombre y edad)
     var edadMaxima = 0
     var edadMinima = Int.MAX_VALUE
-    var nombrePersonaMasJoven: String? = null
-    var nombrePersonaMasVieja: String? = null
+    var nombresPersonasMasJovenes = mutableListOf<String>()
+    var nombresPersonasMasViejas = mutableListOf<String>()
 
 
     do {
@@ -58,7 +58,7 @@ fun main() {
                 var edad: Int = 0
 
                 try {
-                    val input =(edad)
+                    val input = (edad)
                     edad = readLine()?.toInt() ?: 0
                 } catch (e: NumberFormatException) {
                     println("Error: Debes ingresar un número entero.")
@@ -67,11 +67,14 @@ fun main() {
                 if (edad <= 0) {
                     println("Edad no válida. Por favor ingrese un número entero mayor que cero.")
                 } else {
-                    estudiantes[nombre] = edad
+                    if (estudiantes.containsKey(nombre)) {
+                        estudiantes[nombre]?.add(edad)
+                    } else {
+                        estudiantes[nombre] = mutableListOf(edad)
+                    }
                     println("La persona $nombre ha sido agregada correctamente.")
                 }
             }
-
             2 -> {
                 if (estudiantes.isEmpty()) {
                     println("No hay personas en la lista.")
@@ -117,7 +120,7 @@ fun main() {
                     2 -> {
                         print("Ingresa la edad del estudiante que deseas buscar: ")
                         val edadABuscar = readLine()?.toInt() ?: 0
-                        val estudiantesConEdad = estudiantes.filterValues { it == edadABuscar }
+                        val estudiantesConEdad = estudiantes.filterValues { it.contains(edadABuscar) }
                         if (estudiantesConEdad.isNotEmpty()) {
                             println("Los estudiantes con $edadABuscar años son:")
                             estudiantesConEdad.keys.forEach { println("- $it") }
@@ -176,21 +179,26 @@ fun main() {
                             println("No hay personas en la lista.")
                         } else {
                             println("Lista de personas:")
-                            estudiantes.forEach { (name, age) ->
-                                println("- $name ($age años)")
-                                if (age < edadMinima) {
-                                    edadMinima = age
-                                    nombrePersonaMasJoven = name
-                                }
-                                if (age > edadMaxima) {
-                                    edadMaxima = age
-                                    nombrePersonaMasVieja = name
+                            estudiantes.forEach { (nombre, edades) ->
+                                println("- $nombre ${edades.joinToString(", ")} años")
+                                edades.forEach { edad ->
+                                    if (edad < edadMinima) {
+                                        edadMinima = edad
+                                        nombresPersonasMasJovenes = mutableListOf(nombre)
+                                    } else if (edad == edadMinima) {
+                                        nombresPersonasMasJovenes.add(nombre)
+                                    }
+                                    if (edad > edadMaxima) {
+                                        edadMaxima = edad
+                                        nombresPersonasMasViejas = mutableListOf(nombre)
+                                    } else if (edad == edadMaxima) {
+                                        nombresPersonasMasViejas.add(nombre)
+                                    }
                                 }
                             }
-                            println("La persona más joven es $nombrePersonaMasJoven, con $edadMinima años.")
-                            println("La persona más vieja es $nombrePersonaMasVieja, con $edadMaxima años.")
+                            println("La(s) persona(s) más joven(es) es(son) ${nombresPersonasMasJovenes.joinToString(", ")} con $edadMinima años.")
+                            println("La(s) persona(s) más vieja(s) es(son) ${nombresPersonasMasViejas.joinToString(", ")} con $edadMaxima años.")
                         }
-
                     }
                     4 -> break
 
@@ -233,7 +241,7 @@ fun main() {
                         if (estudiantes.containsKey(nombre)) {
                             print("Ingresa la nueva edad de la persona: ")
                             val edad = readLine()?.toInt() ?: 0
-                            estudiantes[nombre] = edad
+                            estudiantes[nombre] = mutableListOf(edad)
                             println("La edad de $nombre ha sido actualizada correctamente.")
                         } else {
                             println("La persona $nombre no se encontró en la lista.")
