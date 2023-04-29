@@ -3,21 +3,7 @@ import com.example.aprendiendokotlin.estudiante
 import com.example.aprendiendokotlin.guardarListaEnArchivo
 import java.io.File
 
-val estudiante = mutableMapOf<String, Int>(
-    "Bárbara" to 29,
-    "Luis" to 24,
-    "Lautaro" to 33,
-    "Consuelo" to 32,
-    "Beatríz" to 28,
-    "David" to 54,
-    "Javier" to 32,
-    "José" to 32,
-    "Steven" to 37,
-    "Moises" to 28,
-    "Javiera" to 33,
-    "Leo" to 32,
-    "Sergio" to 32
-) // Diccionario de Esudiante (nombre y edad)
+val estudiante = mutableMapOf<String, Int>() // Diccionario de Esudiante (nombre y edad)
 
 fun main() {
 
