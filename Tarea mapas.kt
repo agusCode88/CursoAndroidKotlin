@@ -6,24 +6,30 @@ Necesario: Llenar la lista de estudiantes
 
 Ideas:
 
-*       Ordenar la lista de personas por nombre o por edad.
-*       Permitir que el usuario busque una persona por nombre o por edad.
-*       Guardar la lista de personas en un archivo y cargarla al iniciar el programa.
-*Morita Agregar validación de entrada de usuario para evitar errores (por ejemplo, asegurarse de que la edad ingresada sea un número entero válido).
+*Ordenar la lista de personas por nombre o por edad.
+*Permitir que el usuario busque una persona por nombre o por edad.
+*Guardar la lista de personas en un archivo y cargarla al iniciar el programa.
+*Agregar validación de entrada de usuario para evitar errores (por ejemplo, asegurarse de que la edad ingresada sea un número entero válido).
 *Agregar una función para mostrar la persona más joven y la persona más vieja en la lista.
-*Stiven Permitir al usuario actualizar la edad de una persona existente.
-*Javiera Agregar una función para mostrar la cantidad total de personas en la lista.
+*Permitir al usuario actualizar la edad de una persona existente.
+*Agregar una función para mostrar la cantidad total de personas en la lista.
 *Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
 
  */
 
 
 fun main() {
-    val estudiantes = mutableMapOf<String, Int>() // Diccionario de Estudiantes (nombre y edad)
-    var edadMaxima = 0
-    var edadMinima = Int.MAX_VALUE
-    var nombrePersonaMasJoven: String? = null
-    var nombrePersonaMasVieja: String? = null
+    // Diccionario de Estudiantes (nombre y edad)
+    val estudiantes = mutableMapOf<String, Int>()
+
+// Variables para almacenar la edad máxima, edad mínima y los nombres de la persona más joven y la persona más vieja
+    var edadMaxima = 0 // Inicializar la edad máxima en 0
+    var edadMinima =
+        Int.MAX_VALUE // Inicializar la edad mínima en el valor máximo posible de un entero
+    var nombrePersonaMasJoven: String? =
+        null // Inicializar el nombre de la persona más joven en null
+    var nombrePersonaMasVieja: String? =
+        null // Inicializar el nombre de la persona más vieja en null
 
 
     do {
@@ -39,13 +45,20 @@ fun main() {
         println("╚════════════════════════════════════╝")
 
         print("Ingresa tu opción: ")
+
+        // Variable para almacenar la opción seleccionada en el menú principal
         var opcionMenuPrincipal: Int? = null
+
+// Ciclo do-while que se repite mientras la opción seleccionada es nula o no está entre 1 y 7
         do {
+            // Se lee la opción seleccionada desde la entrada estándar y se convierte a un entero o nulo si la entrada no es un número
             opcionMenuPrincipal = readLine()?.toIntOrNull()
+            // Si la opción es nula o no está entre 1 y 7, se imprime un mensaje de error
             if (opcionMenuPrincipal == null || opcionMenuPrincipal !in 1..7) {
                 println("Opción inválida. Inténtalo de nuevo.")
             }
         } while (opcionMenuPrincipal == null || opcionMenuPrincipal !in 1..7)
+
 
 
         when (opcionMenuPrincipal) {
@@ -58,7 +71,7 @@ fun main() {
                 var edad: Int = 0
 
                 try {
-                    val input =(edad)
+                    val input = (edad)
                     edad = readLine()?.toInt() ?: 0
                 } catch (e: NumberFormatException) {
                     println("Error: Debes ingresar un número entero.")
