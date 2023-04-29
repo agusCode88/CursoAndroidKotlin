@@ -83,8 +83,18 @@ Clase 5 - Mapas o Diccionario de Datos
 
 Actividad Practica: https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaMapas.kt
 
+
 28/04/2023
-Clase 6 - POO - Programacion orientada a Objetos en Kotlin
+Clase 6 - POO - Poniendo en practica lo aprendido
+
+* Terminar actividad Clase 5 
+* Los equipos hacen merge de las ramas
+* Presentacion de los grupos 
+* Resolucion de dudas
+
+
+29/04/2023
+Clase 7 - POO - Programacion orientada a Objetos en Kotlin
 
 * Paradigma de orientacion a Objeto
 * Definicion de una Clase o Entidad
@@ -93,9 +103,26 @@ Clase 6 - POO - Programacion orientada a Objetos en Kotlin
 * Metodos o comportamientos de una clase.
 * Interactuando con Objetos en Kotlin 
 * Lista de Objetos 
-* Mapaas de Datos con objetos
+* Mapas de Datos con objetos
 
 Material de apoyo : https://developer.android.com/codelabs/basic-android-kotlin-compose-classes-and-objects?hl=es-419#0
+Actividad Practica : 
+
+02/05/2023
+Clase 8 - POO  Uso de Data y Objects Classes - Encapsulamiento
+
+* Defincion de Data Classes
+* Creacion de Data Class
+* Definicion de Data Object
+* Encapsulamiento (public - private - protected) 
+
+03/05/2023
+Clase 9 Herencia - Abstraccion - Interfaces en Kotlin 
+
+04/05/2023
+Clase 10   Polimorfismo en Kotlin 
+
+
 
 
 
