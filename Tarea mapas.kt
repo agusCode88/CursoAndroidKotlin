@@ -141,7 +141,7 @@ fun main() {
 
                     3 -> break
 
-                    4 -> return
+                    4  -> return
 
                     else -> {
                         println("Opción inválida.")
