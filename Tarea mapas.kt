@@ -260,7 +260,9 @@ fun main() {
                     }
                 } while (opcionMenuActualizar == null || opcionMenuActualizar !in 1..7)
 
+                // Se utiliza una estructura de control when para seleccionar la acción correspondiente según la opción seleccionada por el usuario.
                 when (opcionMenuActualizar) {
+                    // Si la opción seleccionada es 1, se solicita al usuario el nombre de la persona cuya edad se actualizará y se actualiza la edad.
                     1 -> {
                         print("Ingresa el nombre de la persona que deseas actualizar la edad: ")
                         val nombre = readLine()?.toString() ?: ""
@@ -272,23 +274,20 @@ fun main() {
                         } else {
                             println("La persona $nombre no se encontró en la lista.")
                         }
-
                     }
-
+                    // Si la opción seleccionada es 2, se muestra un mensaje indicando que se agregará una dirección.
                     2 -> {
                         println("Aquí va la funcion agregar dirección")
-
                     }
-
+                    // Si la opción seleccionada es 3, se muestra un mensaje indicando que se agregará un teléfono.
                     3 -> {
                         println("Aquí va la funcion agregar teléfono")
-
                     }
-
+                    // Si la opción seleccionada es 4, se muestra un mensaje indicando que se agregará información adicional.
                     4 -> {
                         println("Aquí va la funcion agregar información adicional")
                     }
-
+                    // Si la opción seleccionada es 5, se solicita al usuario el nombre de la persona que se eliminará de la lista y se elimina.
                     5 -> {
                         print("Ingresa el nombre de la persona que deseas eliminar: ")
                         val nombre = readLine()?.toString() ?: ""
@@ -299,9 +298,9 @@ fun main() {
                             println("La persona $nombre no se encontró en la lista.")
                         }
                     }
-
+                    // Si la opción seleccionada es 6, se rompe el ciclo y se vuelve al menú principal.
                     6 -> break
-
+                    // Si la opción seleccionada es 7, se termina el programa.
                     7 -> return
 
                     else -> {
