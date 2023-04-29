@@ -1,8 +1,22 @@
-package com.example.aprendiendokotlin.tareas
-import com.example.aprendiendokotlin.estudiante
-import com.example.aprendiendokotlin.guardarListaEnArchivo
+package com.example.aprendiendokotlin
+
+// Librería necesaria para trabajar con archivos
 import java.io.File
 
+/*
+Necesario: Llenar la lista de estudiantes
+Ideas:
+*Ordenar la lista de personas por nombre o por edad.
+*Permitir que el usuario busque una persona por nombre o por edad.
+*Guardar la lista de personas en un archivo y cargarla al iniciar el programa.
+*Agregar validación de entrada de usuario para evitar errores (por ejemplo, asegurarse de que la edad ingresada sea un número entero válido).
+*Agregar una función para mostrar la persona más joven y la persona más vieja en la lista.
+*Permitir al usuario actualizar la edad de una persona existente.
+*Agregar una función para mostrar la cantidad total de personas en la lista.
+*Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
+ */
+
+//Necesito que el mapa esté fuera del main para que se pueda acceder a este desde las funciones
 val estudiante = mutableMapOf<String, Int>(
     "Bárbara" to 29,
     "Luis" to 24,
@@ -16,13 +30,15 @@ val estudiante = mutableMapOf<String, Int>(
     "Moises" to 28,
     "Javiera" to 33,
     "Leo" to 32,
-    "Sergio" to 32
-) // Diccionario de Esudiante (nombre y edad)
+    "Sergio" to 32)
 
 fun main() {
+    //Al inicio del programa el mapa se rellena con los estudiantes guardados en el archivo
+
+
+
 
     cargarListaDesdeArchivo()
-
 
     do {
         println("╔══════════════════════════════════╗")
@@ -31,14 +47,12 @@ fun main() {
         println("║ 1. Agregar estudiante            ║")
         println("║ 2. Mostrar lista de estudiantes  ║")
         println("║ 3. Eliminar estudiante           ║")
-        println("║ 4. Mostrar mayor y menor         ║")
         println("║ 5. Guardar lista en archivo      ║")
-        println("║ 6. Total de estudiantes          ║")
         println("║ 7. Salir                         ║")
         println("╚══════════════════════════════════╝")
 
         print("Ingresa tu opción: ")
-        val opcion = readLine()?.toIntOrNull() ?: 0
+        val opcion = readLine()?.toInt() ?: 0
 
         when (opcion) {
             1 -> {
@@ -69,32 +83,18 @@ fun main() {
                     println("La persona $nombre no se encontró en la lista.")
                 }
             }
-
-            4-> {
-                var alumnoMayor= estudiante.maxOf { it.value }
-                var alumnoMenor= estudiante.minOf { it.value }
-
-                println("La mayor edad es: $alumnoMayor , y la menor edad es $alumnoMenor")
-            }
-
             5 -> {
                 guardarListaEnArchivo()
             }
-
-            6-> {
-                mostrarDeCantidadPersonas(estudiante)}
             7 -> {
                 println("Saliendo del programa...")
+                System.exit(0)
             }
             else -> {
-                println("Opción inválida. Inténtalo de  nuevo.")
+                println("Opción inválida. Inténtalo de nuevo.")
             }
         }
-    } while (opcion != 7)
-}
-fun mostrarDeCantidadPersonas(estudiante: MutableMap<String, Int>) {
-    val cantidadDePersonas = estudiante.size
-    println("Hay $cantidadDePersonas estudiantes Android.")
+    } while (opcion != 4)
 }
 
 // Guarda la lista de estudiantes en un archivo de texto.
@@ -136,4 +136,3 @@ fun cargarListaDesdeArchivo() {
         println("Ha ocurrido un error al cargar la lista desde el archivo.")
     }
 }
-
