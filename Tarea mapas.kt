@@ -34,7 +34,7 @@ fun main() {
         println("║ 2. Mostrar lista de estudiantes    ║") //*Agregar una función para mostrar la cantidad total de personas en la lista.
         println("║ 3. Buscar estudiante               ║") //Permitir que el usuario busque una persona por nombre o por edad.
         println("║ 4. Ordenar lista de estudiantes    ║") //*Ordenar la lista de personas por nombre o por edad.
-        println("║ 5. Actualizar estudiantes          ║") // *Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
+        println("║ 5. Actualizar estudiantes          ║") // *Agregarr la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
         println("║ 7. Salir                           ║")
         println("╚════════════════════════════════════╝")
 
