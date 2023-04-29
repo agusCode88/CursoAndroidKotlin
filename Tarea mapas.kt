@@ -35,7 +35,7 @@ fun main() {
         println("║ 3. Buscar estudiante               ║") //Permitir que el usuario busque una persona por nombre o por edad.
         println("║ 4. Ordenar lista de estudiantes    ║") //*Ordenar la lista de personas por nombre o por edad.
         println("║ 5. Actualizar estudiantes          ║") // *Agregarr la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
-        println("║ 7. Salir                           ║")
+        println("║ 6. Salir                           ║")
         println("╚════════════════════════════════════╝")
 
         print("Ingresa tu opción: ")
