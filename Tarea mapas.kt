@@ -26,6 +26,7 @@ fun main() {
     var nombresPersonasMasViejas = mutableListOf<String>()
 
 
+
     do {
         println("╔════════════════════════════════════╗")
         println("║ MENÚ PRINCIPAL ESTUDIANTES ANDROID ║")
@@ -165,23 +166,26 @@ fun main() {
 
                 when (opcionMenuOrdenar) {
                     1 -> {
-                        println("Aqui va la funcion de ordenar por nombre")
-
+                        val listaOrdenada = estudiantes.toList().sortedBy { it.first }
+                        println("Lista de estudiantes ordenada por nombre:")
+                        listaOrdenada.forEach { (nombre, edades) ->
+                            println("$nombre: ${edades.joinToString(", ")}")
+                        }
                     }
-
                     2 -> {
-                        println("Aqui va la funcion de ordenar por edad")
-
+                        val listaOrdenada = estudiantes.toList().sortedBy { it.second.maxOrNull() }
+                        println("Lista de estudiantes ordenada por edad:")
+                        listaOrdenada.forEach { (nombre, edades) ->
+                            println("$nombre: ${edades.joinToString(", ")}")
+                        }
                     }
 
-                    3 -> {
+                3 -> {
                         if (estudiantes.isEmpty()) {
                             println("No hay personas en la lista.")
                         } else {
-                            println("Lista de personas:")
-                            estudiantes.forEach { (nombre, edades) ->
-                                println("- $nombre ${edades.joinToString(", ")} años")
-                                edades.forEach { edad ->
+                           estudiantes.forEach { (nombre, edades) ->
+                                    edades.forEach { edad ->
                                     if (edad < edadMinima) {
                                         edadMinima = edad
                                         nombresPersonasMasJovenes = mutableListOf(nombre)
