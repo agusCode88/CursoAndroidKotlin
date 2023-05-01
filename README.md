@@ -109,18 +109,36 @@ Material de apoyo : https://developer.android.com/codelabs/basic-android-kotlin-
 Actividad Practica : 
 
 02/05/2023
-Clase 8 - POO  Uso de Data y Objects Classes - Encapsulamiento
+Clase 8 - POO  Propiedades-Constructor Primario- Constructor Secundario- Getters y Setters  
+
+* Uso del constructor primario 
+* Uso del constructor y propiedad init
+* Uso del constructor secundario
+* Diferencias del uso entre cosntructores
+* Usando las porpiedades get y set
+* Instanciando Objetos 7
+* Actividad Práctica 
+
+03/05/2023
+Clase 9 POO - Herencia -  Encapsulamiento - Data class y Data Objects 
+
+* Encapsulamiento : Modificadores de acceso (public - private - protected)
+* Herencia: Clase Madre o Padre - Clase Hija
+* Modificadores de acceso en la herencia de clases 
+* Uso del super en Kotlin 
+
+Uso de Data y Objects Classes 
 
 * Defincion de Data Classes
 * Creacion de Data Class
 * Definicion de Data Object
-* Encapsulamiento (public - private - protected) 
 
-03/05/2023
-Clase 9 Herencia - Abstraccion - Interfaces en Kotlin 
+ 
+04/05/11112023
+Clase 10 POO - Abstraccion e interfaces  
 
-04/05/2023
-Clase 10   Polimorfismo en Kotlin 
+
+ 
 
 
 
