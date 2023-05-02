@@ -120,22 +120,24 @@ Clase 8 - POO  Propiedades-Constructor Primario- Constructor Secundario- Getters
 * Actividad Práctica 
 
 03/05/2023
-Clase 9 POO - Herencia -  Encapsulamiento - Data class y Data Objects 
+Clase 9 POO - Herencia  y Encapsulamiento  
 
 * Encapsulamiento : Modificadores de acceso (public - private - protected)
 * Herencia: Clase Madre o Padre - Clase Hija
 * Modificadores de acceso en la herencia de clases 
 * Uso del super en Kotlin 
-
-Uso de Data y Objects Classes 
-
-* Defincion de Data Classes
-* Creacion de Data Class
-* Definicion de Data Object
+* Uso del Override en Kotlin
 
  
 04/05/11112023
-Clase 10 POO - Abstraccion e interfaces  
+Clase 10 POO - Abstraccion e interfaces  - Data y Objects Classes 
+
+* Definicion de abstraccion 
+* Importancia de las interfaces en Kotlin 
+* Declarar una interfaz 
+* Defincion de Data Classes
+* Creacion de Data Class
+* Definicion de Data Object
 
 
  
