@@ -1,4 +1,4 @@
-# PrimeraClaseAndroid Repositorio
+# Bootcamp Kotlin y Android 
 
 22/04/2023
 <br>Clase 0 <br/> 
@@ -17,7 +17,7 @@
 * Gitflow
 
 21/04/2023
-Clase 1- Variables y funciones en Kotlin 
+<br>Clase 1- Variables y funciones en Kotlin<br/>  
 
 * Historia y fundamentos de Kotlin 
 * Variables en Kotlin 
@@ -50,7 +50,7 @@ https://developer.android.com/codelabs/basic-android-kotlin-compose-kotlin-funda
 https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaArreglos.kt
 
 26/04/2023
-Clase 4 - Arreglos y Listas de arreglos
+<br>Clase 4 - Arreglos y Listas de arreglos<br/> 
 
 * Recorriendo un Array con for
 * Uso del while y do while
@@ -67,7 +67,7 @@ Actividad Practica: https://github.com/agusCode88/PrimeraClaseAndroid/blob/Devel
 
 
 27/04/2023
-Clase 5 - Mapas o Diccionario de Datos 
+<br>Clase 5 - Mapas o Diccionario de Datos </br>
 
 * Creando Diccionario o Mapa de datos
 * Mapas Mutables e Inmutables
@@ -85,7 +85,7 @@ Actividad Practica: https://github.com/agusCode88/PrimeraClaseAndroid/blob/Devel
 
 
 28/04/2023
-Clase 6 - POO - Poniendo en practica lo aprendido
+<br>Clase 6 - POO - Poniendo en practica lo aprendido</br>
 
 * Terminar actividad Clase 5 
 * Los equipos hacen merge de las ramas
@@ -94,7 +94,7 @@ Clase 6 - POO - Poniendo en practica lo aprendido
 
 
 29/04/2023
-Clase 7 - POO - Programacion orientada a Objetos en Kotlin
+<br>Clase 7 - POO - Programacion orientada a Objetos en Kotlin</br>
 
 * Paradigma de orientacion a Objeto
 * Definicion de una Clase o Entidad
@@ -109,7 +109,7 @@ Material de apoyo : https://developer.android.com/codelabs/basic-android-kotlin-
 Actividad Practica : 
 
 02/05/2023
-Clase 8 - POO  Propiedades-Constructor Primario- Constructor Secundario- Getters y Setters  
+<br>Clase 8 - POO  Propiedades-Constructor Primario- Constructor Secundario- Getters y Setters </br>
 
 * Uso del constructor primario 
 * Uso del constructor y propiedad init
@@ -121,7 +121,7 @@ Clase 8 - POO  Propiedades-Constructor Primario- Constructor Secundario- Getters
 * Actividad Práctica : https://github.com/agusCode88/CursoAndroidKotlin/blob/Develop/tareas/MantenedorCurso.kt
 
 03/05/2023
-Clase 9 POO - Herencia  y Encapsulamiento  
+<br>Clase 9 POO - Herencia  y Encapsulamiento </br>
 
 * Encapsulamiento : Modificadores de acceso (public - private - protected)
 * Herencia: Clase Madre o Padre - Clase Hija
@@ -131,11 +131,12 @@ Clase 9 POO - Herencia  y Encapsulamiento
 
  
 04/05/11112023
-Clase 10 POO - Abstraccion e interfaces  - Data y Objects Classes 
+<br>Clase 10 POO - Abstraccion e interfaces  - Data y Objects Classes </br>
 
 * Definicion de abstraccion 
 * Importancia de las interfaces en Kotlin 
 * Declarar una interfaz 
+* Utilizando inerfaves en Kotlin
 * Defincion de Data Classes
 * Creacion de Data Class
 * Definicion de Data Object
