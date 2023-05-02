@@ -117,7 +117,8 @@ Clase 8 - POO  Propiedades-Constructor Primario- Constructor Secundario- Getters
 * Diferencias del uso entre cosntructores
 * Usando las porpiedades get y set
 * Instanciando Objetos 7
-* Actividad Práctica 
+
+* Actividad Práctica : https://github.com/agusCode88/CursoAndroidKotlin/blob/Develop/tareas/MantenedorCurso.kt
 
 03/05/2023
 Clase 9 POO - Herencia  y Encapsulamiento  
