@@ -1,9 +1,17 @@
 package com.example.aprendiendokotlin.TareaPOO
 
+import poo.Estudiante
 
-    fun main(){
 
-        //val curso:Curso = Curso("programacion en Android",13)
+fun main(){
+
+        var curso =  mutableListOf<Alumno>()
+    var alumno1:Alumno = Alumno("Beatriz", "Urzua", "19247574-0",28, intArrayOf())
+    var alumno2:Alumno = Alumno("Felipe", "Termini", "19247574-0",28, intArrayOf())
+
+    curso.add(alumno1)
+    curso.add(alumno2)
+
         var opcion: Int = -1
         while (opcion != 0) {
             mostrarMenu()
@@ -26,23 +34,24 @@ package com.example.aprendiendokotlin.TareaPOO
 
                     println("Ingrese la cantidad de notas del estudiante:")
                     val cantidadNotas = readLine()?.toInt() ?: continue
-                    val notas = IntArray(cantidadNotas)
+                    val listaDeNotas = IntArray(cantidadNotas)
 
-                    for (i in 0 until cantidadNotas) {
-                        println("Ingrese la nota ${i + 1}:")
-                        notas[i] = readLine()?.toInt() ?: continue
+                    for (nota in 0 until cantidadNotas) {
+                        println("Ingrese la nota ${nota + 1}:")
+                        listaDeNotas[nota] = readLine()?.toInt() ?: continue
                     }
-                    //val estudiante = Alumno(nombre,apellido,rut, edad, notas)
-                   // curso.agregarEstudiante(estudiante)
+                    var estudiante = Alumno(nombre,apellido,rut, edad, listaDeNotas)
+                    curso.add(estudiante)
                     continue
 
                 }
                 2 -> {
                     // mostrar estudiantes
-                   // curso.mostrarEstudiantesCurso()
+                    mostrarEstudiantesCurso(curso)
 
                 }
                 3 -> {
+                    //buscar estudiante por Rut
                     println("Ingrese el Rut del estudiante a buscar:")
                     val rut = readLine() ?: continue
                    // val estudianteEncontrado=curso.buscarEstudiantePorRut(rut)
@@ -82,6 +91,34 @@ package com.example.aprendiendokotlin.TareaPOO
         println("5. Ver promedio de notas y asistencia de estudiante")
         println("0. Salir")
     }
+
+fun mostrarEstudiantesCurso(curso:MutableList<Alumno>){
+
+    println("Listado de estudiantes")
+
+    curso.forEach {
+        println("${it.nombre} ${it.apellido}")
+    }
+}
+
+fun buscarEstudiantePorRut(rut: String){
+
+    
+
+}
+
+
+class Alumno(val nombre: String, val apellido:String, val rut:String, var edad:Int, var nota:IntArray){
+
+    constructor(): this ("","","",0, intArrayOf() )
+}
+
+class Curso(nombreCurso: String){
+
+    constructor(): this("")
+}
+
+
 
 
 
