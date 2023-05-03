@@ -31,7 +31,40 @@ Secundario: Se encuentra adentro de la declaracion de la clase
 fun main(){
 
     var lanzador = Main2()
-    lanzador.usoConstructorPrimario()
+   // lanzador.usoConstructorPrimario()
+
+/*    var perro = Perro()
+    perro.color= "negro"
+    perro.edad = 10
+    perro.razaPerro="Siberiano"
+    perro.ladrar()
+    perro.comer()
+
+    var gato = Gato()
+    gato.color="Blanco"
+    gato.edad= 2
+    gato.maullar()
+    gato.comer()
+
+    var animal = Animal()
+    animal.edad=1
+    animal.color="Verde"
+    animal.comer()
+
+    var perro2 = Perro()
+    perro2.comer()
+
+    var gato2 = Gato()
+    gato2.comer()*/
+
+    var perro3 = Perro()
+    perro3.comer()
+    println(perro3.color)
+
+    var gato3 = Gato()
+    gato3.comer()
+    println(gato3.color)
+
 }
 public final class Main2 {
 
@@ -185,14 +218,12 @@ open class ModificadoresAccesso{
 }
 
 class ModificadoresAccesoHijo : ModificadoresAccesso(){
-
     private fun probandoAccesos2(){
         super.probandoAccesos()
         propiedad1 // Puedo acceder a esta propiedad , es publica
         this.propiedad1
         this.propiedad2 // Puedo aceder porque es protected , la clase pade e hijas pueden acceder a ellas pero nada de afuera
         //this.propiedad3 // No puedo porque es privada , solo la clase padre puede contenerla
-
     }
 
 }
@@ -205,4 +236,38 @@ class ClaseCualquiera {
         acceso.propiedad1 // Puedo porque es publica
 
     }
+}
+
+
+open class Animal{
+    open var color:String = "Blanco"
+    open fun comer(){
+        println("Animal Come")
+    }
+
+}
+
+class Perro:Animal(){
+
+    override var color:String = "Negro"
+    fun ladrar(){
+        println("Ladrar")
+    }
+    override fun comer(){
+        super.comer()
+        println("Perro Come")
+    }
+}
+class Gato:Animal(){
+
+    override var color:String = "Amarillo"
+    fun maullar(){
+        println("Maullar")
+    }
+
+    override fun comer(){
+        super.comer()
+        println(" Gato Come")
+    }
+
 }
