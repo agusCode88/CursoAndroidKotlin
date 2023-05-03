@@ -1,7 +1,5 @@
 package com.example.aprendiendokotlin.TareaPOO
 
-import com.example.codigospractica.modelo.Estudiante
-import com.example.codigospractica.modelo.Persona
 
 class Curso {
 
