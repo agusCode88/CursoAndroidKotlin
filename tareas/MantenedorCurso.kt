@@ -2,7 +2,6 @@ package com.example.aprendiendokotlin.TareaPOO
 
 import poo.Estudiante
 
-
 fun main() {
 
     var curso = mutableListOf<Alumno>()
@@ -43,21 +42,18 @@ fun main() {
                 var estudiante = Alumno(nombre, apellido, rut, edad, listaDeNotas)
                 curso.add(estudiante)
                 continue
-
             }
 
             2 -> {
                 // mostrar estudiantes
                 mostrarEstudiantesCurso(curso)
-
             }
 
             3 -> {
                 //buscar estudiante por Rut
                 println("Ingrese el Rut del estudiante a buscar:")
                 val rutIngresado = readLine() ?: continue
-                buscarEstudiantePorRut(curso, rutIngresado)
-//
+                buscarEstudiantePorRut(curso, rutIngresado)//
             }
 
             4 -> {
@@ -65,15 +61,18 @@ fun main() {
                 println("Ingrese el Rut o el nombre del estudiante a buscar:")
                 val rutoNombre = readLine() ?: continue
                 actualizarEstudiantePorNombreORut(curso, rutoNombre)
-
             }
 
             5 -> {
                 // Ver promedio de notas y de asitencia estudiante
+                println("Ingrese el Rut del estudiante del que se desea conocer el promedio:")
+                val rutIngresado = readLine() ?: continue
+                PromedioPorRut(curso, rutIngresado)
             }
 
             0 -> {
                 println("Adiós!")
+                System.exit(0)
             }
 
             else -> {
@@ -168,11 +167,24 @@ fun actualizarEstudiantePorNombreORut(curso: MutableList<Alumno>, rutoNombre:Str
     }
 }
 
-fun verPromedioDeNotasEstudiante(curso: MutableList<Alumno>, rutIngresado: String){
+fun PromedioPorRut(curso: MutableList<Alumno>, rutIngresado: String) {
+
+    var alumnoEncontrado = curso.find { it.rut.equals(rutIngresado) }
+
+    if (alumnoEncontrado != null) {
+
+        val notas = alumnoEncontrado.nota
+        val promedio = notas.average()
+
+        println("El promedio es: $promedio")
 
 
-
+    } else {
+        println("Alumno no encontrado")
+    }
 }
+
+
 
 
 class Alumno(
