@@ -10,10 +10,16 @@ class Curso {
     constructor(nombreCurso: String) {
         this.nombreCurso = nombreCurso
 
-
     }
 
     constructor() : this (""){
     }
 
+
+
+
 }
+
+
+
+

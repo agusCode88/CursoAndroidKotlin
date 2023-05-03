@@ -4,7 +4,7 @@ import poo.Estudiante
 
 fun main() {
 
-    var curso = Curso()
+
     var alumno1: Alumno = Alumno("Beatriz", "Urzua", "19247574-0", 28, intArrayOf(3, 4, 5))
     var alumno2: Alumno = Alumno("Felipe", "Termini", "1-1", 28, intArrayOf(4, 2, 4))
 
