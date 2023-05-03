@@ -1,4 +1,4 @@
-package com.example.aprendiendokotlin.TareaPOO
+package TareaPoo
 
 import poo.Estudiante
 
@@ -182,15 +182,7 @@ fun PromedioPorRut(curso: MutableList<Alumno>, rutIngresado: String) {
     }
 }
 
-class Alumno(
-    var nombre: String,
-    var apellido: String,
-    val rut: String,
-    var edad: Int,
-    var nota: IntArray
-) {
 
-}
 
 
 

@@ -1,0 +1,7 @@
+package TareaPoo
+
+class Curso() {
+
+
+
+}
