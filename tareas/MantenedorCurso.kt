@@ -159,7 +159,6 @@ fun actualizarEstudiantePorNombreORut(curso: MutableList<Alumno>, rutoNombre:Str
 
                 println("Modificacion exitosa")
             }
-
         }
 
     } else {
@@ -183,9 +182,6 @@ fun PromedioPorRut(curso: MutableList<Alumno>, rutIngresado: String) {
         println("Alumno no encontrado")
     }
 }
-
-
-
 
 class Alumno(
     var nombre: String,
