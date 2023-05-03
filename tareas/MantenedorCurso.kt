@@ -3,7 +3,7 @@ package com.example.aprendiendokotlin.TareaPOO
 
     fun main(){
 
-        //val curso:Curso = Curso("programacion en Android",13)
+        val curso:Curso = Curso("programacion en Android",13)
         var opcion: Int = -1
         while (opcion != 0) {
             mostrarMenu()
@@ -32,31 +32,31 @@ package com.example.aprendiendokotlin.TareaPOO
                         println("Ingrese la nota ${i + 1}:")
                         notas[i] = readLine()?.toInt() ?: continue
                     }
-                    //val estudiante = Alumno(nombre,apellido,rut, edad, notas)
-                   // curso.agregarEstudiante(estudiante)
+                    val estudiante = Alumno(nombre,apellido,rut, edad, notas)
+                    curso.agregarEstudiante(estudiante)
                     continue
 
                 }
                 2 -> {
                     // mostrar estudiantes
-                   // curso.mostrarEstudiantesCurso()
+                    curso.mostrarEstudiantesCurso()
 
                 }
                 3 -> {
                     println("Ingrese el Rut del estudiante a buscar:")
                     val rut = readLine() ?: continue
-                   // val estudianteEncontrado=curso.buscarEstudiantePorRut(rut)
-//                    if(estudianteEncontrado!= null){
-//                        estudianteEncontrado.mostrarDatosEstudiante()
-//                    } else {
-//                        println("Estudiante no se encuentra en la lista")
-//                    }
+                    val estudianteEncontrado=curso.buscarEstudiantePorRut(rut)
+                    if(estudianteEncontrado!= null){
+                        estudianteEncontrado.mostrarDatosEstudiante()
+                    } else {
+                        println("Estudiante no se encuentra en la lista")
+                    }
                 }
                 4 -> {
                     // actualizar estudiante por nombre o rut
                     println("Ingrese el Rut o el nombre del estudiante a buscar:")
                     val rutoNombre = readLine() ?: continue
-                    //curso.actualizarEstudiantePorNombreORut(rutoNombre)
+                    curso.actualizarEstudiantePorNombreORut(rutoNombre)
 
                 }
                 5-> {
