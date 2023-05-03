@@ -47,6 +47,9 @@ package com.example.aprendiendokotlin.TareaPOO
                     val rut = readLine() ?: continue
                     val estudianteEncontrado=curso.buscarEstudiantePorRut(rut)
                     if(estudianteEncontrado!= null){
+                        estudianteEncontrado.mostrarDatosEstudiante()
+                    } else {
+                        println("Estudiante no se encuentra en la lista")
                     }
                 }
                 4 -> {

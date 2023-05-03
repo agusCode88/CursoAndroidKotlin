@@ -49,7 +49,7 @@ class Curso {
              estudianteEncontrado= listaEstudiantes.get(rutPersona)!!
 
         } else{
-            println("Estudiante no se encuentra en la lista")
+
             estudianteEncontrado = null
         }
 
