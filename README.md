@@ -123,6 +123,14 @@ Actividad Practica :
 03/05/2023
 <br>Clase 9 POO - Herencia  y Encapsulamiento </br>
 
+* Tarea Mantenedor del Curso con POO
+* Trabajo en equipo o individual 
+* Repaso de la estructura de una clase en Kotlin.
+
+
+04/05/2023
+<br>Clase 10 POO - Herencia  y Encapsulamiento </br>
+
 * Encapsulamiento : Modificadores de acceso (public - private - protected)
 * Herencia: Clase Madre o Padre - Clase Hija
 * Modificadores de acceso en la herencia de clases 
@@ -130,22 +138,17 @@ Actividad Practica :
 * Uso del Override en Kotlin
 
  
-04/05/11112023
-<br>Clase 10 POO - Abstraccion e interfaces  - Data y Objects Classes </br>
+05/05/2023
+<br>Clase 11 POO - Abstraccion e interfaces  - Data y Objects Classes </br>
 
-* Definicion de abstraccion 
+* Definicion de abstraccion
+* Implementacion de abstraccion en Kotlin
 * Importancia de las interfaces en Kotlin 
 * Declarar una interfaz 
-* Utilizando inerfaves en Kotlin
+* Utilizando interfaces en Kotlin
 * Defincion de Data Classes
 * Creacion de Data Class
 * Definicion de Data Object
-
-
- 
-
-
-
 
 
 
