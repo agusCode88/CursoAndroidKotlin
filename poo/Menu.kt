@@ -3,18 +3,19 @@ package com.example.aprendiendokotlin.poo
 class VerOpciones() {
     fun mostrarMenuPrincipal() {
 
-        println("╔════════════════════════════════════╗")
-        println("║ MENÚ PRINCIPAL ESTUDIANTES ANDROID ║")
-        println("╠════════════════════════════════════╣")
-        println("║ 1. Agregar estudiante              ║")
-        println("║ 2. Mostrar lista de estudiantes    ║")
-        println("║ 3. Buscar estudiante               ║")
-        println("║ 4. Ordenar lista de estudiantes    ║")
-        println("║ 5. Actualizar estudiantes          ║")
-        println("║ 6. Salir                           ║")
-        println("╚════════════════════════════════════╝")
+        println("╔════════════════════════════════════════════╗")
+        println("║ MENÚ PRINCIPAL ESTUDIANTES ANDROID         ║")
+        println("╠════════════════════════════════════════════╣")
+        println("║ 1. Agregar estudiante                      ║")
+        println("║ 2. Mostrar lista de estudiantes            ║")
+        println("║ 3. Buscar estudiante                       ║")
+        println("║ 4. Ordenar lista de estudiantes            ║")
+        println("║ 5. Actualizar estudiantes por nombre o rut ║")
+        println("║ 6. Salir                                   ║")
+        println("╚════════════════════════════════════════════╝")
     }
-                 //JAVI - SUB MENU MOSTRAR AGREGADO
+
+    //JAVI - SUB MENU MOSTRAR AGREGADO
     fun mostrarSubMMostrarLista() {
         println("╔══════════════════════════════════════════════╗")
         println("║      MENÚ MOSTRAR ESTUDIANTES ANDROID        ║")
@@ -31,6 +32,7 @@ class VerOpciones() {
         println("╠══════════════════════════════════════════════╣")
         println("║ 1. Buscar un estudiante por nombre           ║")
         println("║ 2. Buscar un estudiante por edad             ║")
+        println("║ 3. Buscar un estudiante por rut              ║")
         println("║ 3. Volver al menú principal                  ║")
         println("║ 4. Salir                                     ║")
         println("╚══════════════════════════════════════════════╝")
