@@ -5,8 +5,8 @@ class Curso(var nombreCurso: String) {
     var curso = mutableListOf<Alumno>()
 
 
-    var alumno1: Alumno = Alumno("Beatriz", "Urzua", "19247574-0", 28, intArrayOf(3, 4, 5))
-    var alumno2: Alumno = Alumno("Felipe", "Termini", "1-1", 28, intArrayOf(4, 2, 4))
+    var alumno1: Alumno = Alumno("Beatriz", "Urzua", "19247574-0", 28, mutableListOf(3, 4, 5))
+    var alumno2: Alumno = Alumno("Felipe", "Termini", "1-1", 28, mutableListOf(4, 2, 4))
 
     init {
         curso.add(alumno1)
@@ -30,7 +30,7 @@ class Curso(var nombreCurso: String) {
 
         println("Ingrese la cantidad de notas del estudiante:")
         val cantidadNotas = readln().toInt()
-        var listaDeNotas = IntArray(cantidadNotas)
+        var listaDeNotas = mutableListOf(cantidadNotas)
 
         for (nota in 0 until cantidadNotas) {
             println("Ingrese la nota ${nota + 1}:")
@@ -140,7 +140,7 @@ class Curso(var nombreCurso: String) {
             println("Ingrese la nueva nota")
             var nuevaNota = readln().toInt()
 
-           alumnoEncontrado.nota?.plus(nuevaNota)
+           alumnoEncontrado.nota?.add(nuevaNota)
 
         } else {
             println("Alumno no encontrado")
