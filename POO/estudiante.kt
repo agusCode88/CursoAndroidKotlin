@@ -14,7 +14,7 @@ class Estudiante(
     constructor() : this("", "", 0, "", "")
 
     // Comportamientos
-    fun estudiar() {
+    fun estudiarr() {
         println("$nombreEstudiante está estudiando ${if (matriculado) "en $carrera" else ""}")
     }
 
