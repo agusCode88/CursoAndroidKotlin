@@ -146,10 +146,20 @@ Actividad Practica :
 * Importancia de las interfaces en Kotlin 
 * Declarar una interfaz 
 * Utilizando interfaces en Kotlin
-* Defincion de Data Classes
-* Creacion de Data Class
-* Definicion de Data Object
 
+
+06/05/2023  Data Class - Object Class - Enum Class - Sealed Class - Companion Ojects
+
+* Defincion de Data Classes
+* Creacion de Data Class.
+* Definicion de Data Object
+* Creacion de Data Object
+* Definicion de Enum Class
+* Creacion de una Enum Class
+* Definicion de SEaled Class
+* Creacion Sealed Class
+* Definicion de Companion Ojects
+* Creacion de Companion Object
 
 
 
