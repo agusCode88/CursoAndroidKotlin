@@ -14,7 +14,17 @@ class VerOpciones() {
         println("║ 6. Salir                           ║")
         println("╚════════════════════════════════════╝")
     }
-
+                 //JAVI - SUB MENU MOSTRAR AGREGADO
+    fun mostrarSubMMostrarLista() {
+        println("╔══════════════════════════════════════════════╗")
+        println("║      MENÚ MOSTRAR ESTUDIANTES ANDROID        ║")
+        println("╠══════════════════════════════════════════════╣")
+        println("║ 1. Mostrar lista de estudiantes              ║")
+        println("║ 2. Mostrar promedio de notas y asistencia    ║")
+        println("║ 3. Volver al menú principal                  ║")
+        println("║ 4. Salir                                     ║")
+        println("╚══════════════════════════════════════════════╝")
+    }
     fun mostrarSubMenuBusqueda() {
         println("╔══════════════════════════════════════════════╗")
         println("║ MENÚ BUSCAR ESTUDIANTES ANDROID              ║")
