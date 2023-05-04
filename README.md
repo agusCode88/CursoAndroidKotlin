@@ -139,7 +139,7 @@ Actividad Practica :
 
  
 05/05/2023
-<br>Clase 11 POO - Abstraccion e interfaces  - Data y Objects Classes </br>
+<br>Clase 11 POO - Abstraccion e interfaces  - Singleton , Lateint Keyword  - Companion Oject  </br>
 
 * Definicion de abstraccion
 * Implementacion de abstraccion en Kotlin
@@ -148,8 +148,9 @@ Actividad Practica :
 * Utilizando interfaces en Kotlin
 
 
+
 06/05/2023 
-<br> Clase 12 - POO->  Data Class - Object Class - Enum Class - Sealed Class - Companion Ojects</br>
+<br> Clase 12 - POO->  Data Class - Object Class - Enum Class - Sealed Classs</br>
 
 * Defincion de Data Class
 * Creacion de Data Class.
