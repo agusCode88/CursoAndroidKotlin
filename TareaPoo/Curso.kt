@@ -26,7 +26,7 @@ class Curso(var nombreCurso: String) {
         val rut:String? = readLine()
 
         println("Ingrese la edad del estudiante:")
-        val edad:Int? = readln().toInt()
+        val edad:Int = readln().toInt()
 
         println("Ingrese la cantidad de notas del estudiante:")
         val cantidadNotas = readln().toInt()
@@ -138,7 +138,7 @@ class Curso(var nombreCurso: String) {
         if (alumnoEncontrado != null) {
 
             println("Ingrese la nueva nota")
-            val nuevaNota = readln().toInt()
+            var nuevaNota = readln().toInt()
 
            alumnoEncontrado.nota?.plus(nuevaNota)
 
