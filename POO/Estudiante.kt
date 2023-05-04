@@ -1,45 +1,46 @@
 package com.example.aprendiendokotlin.POO
 
-class Estudiante(rutPersona: String, nombreEstudiante: String, edad: Int, fechaNacimiento: String) {
+class Estudiante(
+    val rutEstudiante: String,
+    var nombreEstudiante: String,
+    val edad: Int,
+    var fechaNacimiento: String,
+    var carrera: String,
+    var matriculado: Boolean = false,
+    var notas: MutableList<Double> = mutableListOf()
+) {
 
-    // Atributos
+    // Constructor vacio
+    constructor() : this("", "", 0, "", "")
 
-    var rutPersona: String = rutPersona
-    var nombreEstudiante: String = nombreEstudiante
-    var edad: Int = edad
-    var fechaNacimiento: String = fechaNacimiento
-
-    constructor() : this("", "", 0, "") {}
-
-    // Métodos
-
-    fun estudianteHabla() {
-        println("Estudiante $nombreEstudiante habla")
+    // Comportamientos
+    fun estudiar() {
+        println("$nombreEstudiante está estudiando ${if (matriculado) "en $carrera" else ""}")
     }
 
-    fun estudianteAsiste(): Boolean {
-        var asiste = true
-        return asiste
+    fun tomarRamos(vararg ramos: String) {
+        println("$nombreEstudiante ha tomado los ramos: ${ramos.joinToString()}")
     }
 
-    fun estudianteCome() {
-        println("Estudiante $nombreEstudiante Come")
+    fun matricular() {
+        matriculado = true
+        println("$nombreEstudiante se ha matriculado en $carrera")
     }
 
-    fun estudianteNoCome() {
-        println("Estudiante $nombreEstudiante no come")
+    fun desmatricular() {
+        matriculado = false
+        println("$nombreEstudiante se ha desmatriculado de $carrera")
     }
 
-    fun estudianteEstudia() {
-        println("Estudiante $nombreEstudiante Estudia")
+    fun agregarNota(nota: Double) {
+        notas.add(nota)
     }
 
-    fun estudianteSePresenta() {
-        println("Rut: $rutPersona")
-        println("Nombre: $nombreEstudiante")
-        println("Edad: $edad")
-        println("Fecha de nacimiento: $fechaNacimiento")
+    fun promedio(): Double {
+        if (notas.isEmpty()) {
+            return 0.0
+        }
+        return notas.sum() / notas.size
     }
 }
-
 
