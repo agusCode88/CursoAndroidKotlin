@@ -121,7 +121,7 @@ Actividad Practica :
 * Actividad Práctica : https://github.com/agusCode88/CursoAndroidKotlin/blob/Develop/tareas/MantenedorCurso.kt
 
 03/05/2023
-<br>Clase 9 POO - Herencia  y Encapsulamiento </br>
+<br>Clase 9 POO - Práctica de POO  </br>
 
 * Tarea Mantenedor del Curso con POO
 * Trabajo en equipo o individual 
