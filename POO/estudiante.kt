@@ -22,7 +22,7 @@ class Estudiante(
         println("$nombreEstudiante ha tomado los ramos: ${ramos.joinToString()}")
     }
 
-    fun matricular() {
+    fun matricularr() {
         matriculado = true
         println("$nombreEstudiante se ha matriculado en $carrera")
     }
