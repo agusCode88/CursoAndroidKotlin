@@ -239,42 +239,46 @@ fun main() {
             } while (true)
 
             5 -> do {
-                println("╔══════════════════════════════════════════════╗")
-                println("║     MENÚ DE ACTUALIZACIÓN LISTA ESTUDIANTES  ║")
-                println("╠══════════════════════════════════════════════╣")
-                println("║ 1. Actualizar la edad del estudiante         ║") // *Permitir al usuario actualizar la edad de una persona existente.
-                println("║ 2. Agregar dirección del estudiante          ║") //*Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
-                println("║ 3. Agregar teléfono  del estudiante          ║") //*Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
-                println("║ 4. Agregar información adicional             ║") //*Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
-                println("║ 5. Eliminar estudiante                       ║") //*Permitir al usuario eliminar una persona existente.
-                println("║ 6. Volver al menú principal                  ║") //Volver al menú
-                println("║ 7. Salir                                     ║") //Salir
-                println("╚══════════════════════════════════════════════╝")
+                fun mostrarSubMenuActualizar() {
+                    print("Ingresa el nombre o RUT del estudiante: ")
+                    val input = readLine()?.toString() ?: ""
+                    val estudiante = estudiantes.keys.find { it == input || estudiantes[it]?.contains(input.toIntOrNull()) ?: false }
+                    if (estudiante != null) {
+                        println("Estudiante encontrado: $estudiante/n")
 
-                print("Ingresa tu opción: ")
-                var opcionMenuActualizar: Int? = null
-                do {
-                    opcionMenuActualizar = readLine()?.toIntOrNull()
-                    if (opcionMenuActualizar == null || opcionMenuActualizar !in 1..7) {
-                        println("Opción inválida. Inténtalo de nuevo.")
-                    }
-                } while (opcionMenuActualizar == null || opcionMenuActualizar !in 1..7)
+                        println("╔══════════════════════════════════════════════╗")
+                        println("║     MENÚ DE ACTUALIZACIÓN LISTA ESTUDIANTES  ║")
+                        println("╠══════════════════════════════════════════════╣")
+                        println("║ 1. Actualizar la edad del estudiante         ║") // *Permitir al usuario actualizar la edad de una persona existente.
+                        println("║ 2. Agregar dirección del estudiante          ║") //*Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
+                        println("║ 3. Agregar teléfono  del estudiante          ║") //*Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
+                        println("║ 4. Agregar información adicional             ║") //*Agregar la posibilidad de agregar más información sobre la persona, como su dirección o su número de teléfono.
+                        println("║ 5. Eliminar estudiante                       ║") //*Permitir al usuario eliminar una persona existente.
+                        println("║ 6. Volver al menú principal                  ║") //Volver al menú
+                        println("║ 7. Salir                                     ║") //Salir
+                        println("╚══════════════════════════════════════════════╝")
 
-                // Se utiliza una estructura de control when para seleccionar la acción correspondiente según la opción seleccionada por el usuario.
-                when (opcionMenuActualizar) {
-                    // Si la opción seleccionada es 1, se solicita al usuario el nombre de la persona cuya edad se actualizará y se actualiza la edad.
-                    1 -> {
-                        print("Ingresa el nombre de la persona que deseas actualizar la edad: ")
-                        val nombre = readLine()?.toString() ?: ""
-                        if (estudiantes.containsKey(nombre)) {
-                            print("Ingresa la nueva edad de la persona: ")
-                            val edad = readLine()?.toInt() ?: 0
-                            estudiantes[nombre] = mutableListOf(edad)
-                            println("La edad de $nombre ha sido actualizada correctamente.")
-                        } else {
-                            println("La persona $nombre no se encontró en la lista.")
-                        }
-                    }
+                        print("Ingresa tu opción: ")
+                        var opcionMenuActualizar: Int? = null
+                        do {
+                            opcionMenuActualizar = readLine()?.toIntOrNull()
+                            if (opcionMenuActualizar == null || opcionMenuActualizar !in 1..7) {
+                                println("Opción inválida. Inténtalo de nuevo.")
+                            }
+                        } while (opcionMenuActualizar == null || opcionMenuActualizar !in 1..7)
+
+                        // Se utiliza una estructura de control when para seleccionar la acción correspondiente según la opción seleccionada por el usuario.
+                        when (opcionMenuActualizar) {
+                            // Si la opción seleccionada es 1, se solicita al usuario el nombre de la persona cuya edad se actualizará y se actualiza la edad.
+                            1 -> {
+                                print("Ingresa la nueva edad de la persona: ")
+                                val edad = readLine()?.toInt() ?: 0
+                                estudiantes[estudiante] = mutableListOf(edad)
+                                println("La edad de $estudiante ha sido actualizada correctamente.")
+                            }  else {
+                                println("Ingrese una edad válida")
+                            }
+
                     // Si la opción seleccionada es 2, se muestra un mensaje indicando que se agregará una dirección.
                     2 -> {
                         println("Aquí va la funcion agregar dirección")
