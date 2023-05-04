@@ -4,6 +4,7 @@ class Curso(var nombreCurso: String) {
 
     var curso = mutableListOf<Alumno>()
 
+
     var alumno1: Alumno = Alumno("Beatriz", "Urzua", "19247574-0", 28, intArrayOf(3, 4, 5))
     var alumno2: Alumno = Alumno("Felipe", "Termini", "1-1", 28, intArrayOf(4, 2, 4))
 
@@ -29,7 +30,7 @@ class Curso(var nombreCurso: String) {
 
         println("Ingrese la cantidad de notas del estudiante:")
         val cantidadNotas = readln().toInt()
-        val listaDeNotas = IntArray(cantidadNotas)
+        var listaDeNotas = IntArray(cantidadNotas)
 
         for (nota in 0 until cantidadNotas) {
             println("Ingrese la nota ${nota + 1}:")
@@ -37,7 +38,6 @@ class Curso(var nombreCurso: String) {
         }
         var estudiante = Alumno(nombre, apellido, rut, edad, listaDeNotas)
         curso.add(estudiante)
-
     }
 
     fun mostrarEstudiantesCurso() {
@@ -81,7 +81,7 @@ class Curso(var nombreCurso: String) {
 
             println("Seleccione atributo a editar")
             println("1.-Nombre , 2.-Apellido, 3.-Edad")
-            var opcion = readln().toInt()
+            var opcion = readLine()?.toIntOrNull()?: 0
 
             when(opcion){
 
@@ -114,7 +114,6 @@ class Curso(var nombreCurso: String) {
         }
     }
 
-
     fun PromedioPorRut(rutIngresado: String) {
 
         var alumnoEncontrado = curso.find { it.rut.equals(rutIngresado) }
@@ -130,6 +129,25 @@ class Curso(var nombreCurso: String) {
         } else {
             println("Alumno no encontrado")
         }
+    }
+
+    fun agregarNotas(rutIngresado: String){
+
+        var alumnoEncontrado = curso.find { it.rut.equals(rutIngresado) }
+
+        if (alumnoEncontrado != null) {
+
+            println("Ingrese la nueva nota")
+            val nuevaNota = readln().toInt()
+
+           alumnoEncontrado.nota?.plus(nuevaNota)
+
+        } else {
+            println("Alumno no encontrado")
+        }
+
+        println("Listado de notas actualizado: ${alumnoEncontrado?.nota?.toList()}")
+
     }
 
 }

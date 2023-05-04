@@ -7,9 +7,9 @@ fun main() {
     var curso = Curso("Programacion Android")
 
     var opcion: Int = -1
-    while (opcion != 0) {
+    while (opcion != -2) {
         mostrarMenu()
-        opcion = readLine()?.toIntOrNull()?: continue
+        opcion = readLine()?.toIntOrNull()?: 0
 
         when (opcion) {
             1 -> {
@@ -46,7 +46,13 @@ fun main() {
                 curso.PromedioPorRut(rutIngresado)
             }
 
-            6 -> {
+            6-> {
+                println("Ingrese el Rut del estudiante al que desea agregar nota:")
+                val rutIngresado = readLine() ?: continue
+                curso.agregarNotas(rutIngresado)
+            }
+
+            7 -> {
                 println("Adiós!")
                 System.exit(0)
             }
@@ -64,5 +70,6 @@ fun mostrarMenu() {
     println("3. Buscar estudiante por rut")
     println("4. Actualizar estudiante por nombre o rut")
     println("5. Ver promedio de notas y asistencia de estudiante")
-    println("6. Salir")
+    println("6. Agregar notas")
+    println("7. Salir")
 }
