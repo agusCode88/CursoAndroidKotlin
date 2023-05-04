@@ -148,15 +148,16 @@ Actividad Practica :
 * Utilizando interfaces en Kotlin
 
 
-06/05/2023  Data Class - Object Class - Enum Class - Sealed Class - Companion Ojects
+06/05/2023 
+<br> Clase 12 - POO->  Data Class - Object Class - Enum Class - Sealed Class - Companion Ojects</br>
 
-* Defincion de Data Classes
+* Defincion de Data Class
 * Creacion de Data Class.
 * Definicion de Data Object
 * Creacion de Data Object
 * Definicion de Enum Class
 * Creacion de una Enum Class
-* Definicion de SEaled Class
+* Definicion de Sealed Class
 * Creacion Sealed Class
 * Definicion de Companion Ojects
 * Creacion de Companion Object
