@@ -8,7 +8,7 @@ fun main(){
     println(gato2.colorGato)
 */
 
-    var persona = Persona("Paolo","Espinola",35,56)
+    /*var persona = Persona("Paolo","Espinola",35,56)
 
     var alumno = Alumno("Paolo","Espinola",65)
 
@@ -16,7 +16,21 @@ fun main(){
 
     persona.saludar()
     alumno.saludar()
-    relator.saludar()
+    relator.saludar()*/
+
+  /*  var view= View()
+    var boton = Button("Login","center")
+    var bordes = BorderButton("Registrase","center",40)
+
+    view.pintar()
+    boton.pintar()
+    bordes.pintar()*/
+
+    val mensajeExito = Mensajeria.Exito("Se ha realizado la accion")
+    val mensajeError = Mensajeria.Error("Ha fallado la accion")
+    getMensajeria(mensajeError)
+
+
 
 
 }
@@ -53,10 +67,18 @@ class Gato(color: String, var razaGato:String): Animal(color) {
 }
 
 
+/*
+
+
+HERENCIA EN KOTLIN
+
+
+ */
+
 // private -> Solo visible dentro la clase
 // protected ->Solo visible  denttro de la clase y sus sub-clases (herencia). Es un private un poco mas flexible
 // public -> visible dentre de la clase , sus subclases y desxe afuera
-open class Persona(var nombre:String,val apellido: String ){
+open class Persona(val nombre:String,val apellido: String ){
 
     private var id:Int = 0
     protected var edad:Int = 0
@@ -82,7 +104,6 @@ class Alumno(nombre: String,apellido: String,promedioNotas:Int):Persona(nombre,a
     init {
        probandoAccesos()
     }
-
 
 
     override fun saludar(){
@@ -114,7 +135,7 @@ class Relator(nombre: String, apellido:String , sueldo:Int) :Persona (nombre, ap
    init {
        probandoAccesos()
    }
-    
+
 
     override fun saludar(){
         super.saludar()
@@ -136,5 +157,76 @@ class Relator(nombre: String, apellido:String , sueldo:Int) :Persona (nombre, ap
 
     }
 
+}
+
+
+open  class View {
+    open fun pintar(){
+        println("Pintando en la vista")
+    }
+}
+
+open class Button(val texto:String , val posicion:String):View(){
+
+    override fun pintar(){
+        println("Dibujando el boton")
+        super.pintar()
+
+    }
+
+}
+
+class BorderButton(texto:String,posicion: String,bordes:Int):Button(texto,posicion){
+
+    override fun pintar() {
+        println("Dibujando los bordes del boton")
+        super.pintar()
+    }
+}
+
+
+
+
+
+
+/*
+
+
+Una clase sellada (o sealed class) permite representar jerarquías restringidas en las que un objeto sólo puede ser de un tipo de las dadas.
+
+Es decir, tenemos un clase con un número específico de subclases. Lo que obtenemos al final es un concepto muy similar al de un enumerado.
+La diferencia radica en que en los enumerados sólo tenemos un único objeto por tipo,
+ mientras que en las sealed classes podemos tener varios objetos de la misma clase.
+
+3.3. Ventajas de las clases selladas
+Las ventajas frente a los enumerados vienen dadas por lo que ya hemos comentado,
+que es el hecho de que los elementos sean clases (class, data class, object e incluso sealed class):
+
+La más importante es que cada subclase puede tener sus propios valores y sus propios métodos,
+a diferencia de los enumerados, cuyos elementos siguen todos la misma estructura.
+Además, los enumerados solamente pueden tener una instancia, mientras que las subclases de clases selladas
+ pueden tener varias instancias, cada una con su estado, o una si la definimos como object.
+
+ */
+
+
+fun getMensajeria(mensajeria:Mensajeria){
+
+    when(mensajeria){
+
+        is Mensajeria.Error -> mensajeria.mostrarMensajeria()
+        is Mensajeria.Exito -> mensajeria.mostrarMensajeria()
+    }
+
+}
+
+
+sealed class Mensajeria(val mensaje:String){
+    class Exito(mensaje:String):Mensajeria(mensaje)
+    class Error(mensaje:String):Mensajeria(mensaje)
+
+    fun mostrarMensajeria(){
+        println("Mensajeria : $mensaje")
+    }
 
 }
