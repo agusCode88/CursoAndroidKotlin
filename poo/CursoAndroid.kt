@@ -1,8 +1,8 @@
 package poo
 
-class CursoAndroid(nombreCurso:String,relator: Relator = Relator()) {
+//class CursoAndroid(nombreCurso:String,relator: Relator = Relator()) {
 
-    var nombreCurso= nombreCurso
+   /* var nombreCurso= nombreCurso
     var listaEstudiantes = mutableListOf<Estudiante>()
 
     constructor() : this ("",Relator())
@@ -60,6 +60,5 @@ class CursoAndroid(nombreCurso:String,relator: Relator = Relator()) {
             estudiante.fechaNacimiento = fechaNacimiento
         }
     }
+*/
 
-
-}

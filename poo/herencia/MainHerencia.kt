@@ -1,57 +1,78 @@
 package poo.herencia
 
 
+
 fun main(){
 
-    var notas = intArrayOf(45,55,60)
+//    var notas = intArrayOf(45,55,60)
+//    var persona = Humano("Jorge","Arancibia",35)
+//    var alumno =  Alumno("David","Toro",54,notas,65)
+//    var relator = Profesor("Agustin","Romero",34,2000000)
+//
+//    persona.saludar()
+//    alumno.saludar()
+//    relator.saludar()
 
-    var alumno = MainHerencia.Alumno()
-    alumno.notas = notas
+    var view = View()
+    var boton = Button("Login","Center")
+    var bordes = DisenioBoton("Login","Center",40)
+
+    bordes.inflar()
+    boton.inflar()
+    view.inflar()
 
 }
 
-class MainHerencia {
+   open class Humano(var nombre:String, var apellido:String, var edad:Int ){
 
-    class Persona(){
+        private var id:Int= 0
 
-        var nombre:String =""
-        var apellido:String = ""
-        var edad:Int = 0
-
-        fun saludar(){
-            println(" Persona Saluda")
+        open fun saludar(){
+            println(" Persona Saluda $nombre")
         }
 
     }
 
-    class Alumno {
+        class Alumno(nombre: String,apellido: String,
+                     edad:Int ,protected var notas:IntArray,
+                     private var porcentajeAsistencia:Int) : Humano(nombre, apellido,edad){
 
-        var nombre:String =""
-        var apellido:String = ""
-        var edad:Int = 0
-        var notas:IntArray = intArrayOf(0)
-        var porcentajeAsistencia: Int = 0
 
-        fun saludar(){
+        init {
+            probarAccesos()
 
-            println("Alumn@ Saluda")
+        }
+
+
+         override fun saludar(){
+
+            println("Alumn@ Saluda $nombre")
+            super.saludar()
+
+        }
+
+        fun probarAccesos(){
+
+            this.apellido
+            this.nombre
+            this.edad
+
         }
 
         fun promedioNotas(){
-            var promedioNotas:Double = notas.average()
+
+            var promedioNotas:Double = this.notas.average()
         }
 
     }
 
-    class Relator {
+    class Profesor(nombre: String,apellido: String,edad:Int, protected var sueldo:Int): Humano(nombre, apellido,edad) {
 
-        var nombre:String =""
-        var apellido:String = ""
-        var edad:Int = 0
-        var sueldo:Int = 0
+        override fun saludar(){
 
-        fun saludar(){
-            println("Relator Saluda")
+            println("Relator Saluda $nombre")
+            super.saludar()
+
         }
 
         fun mostrarSueldo(){
@@ -59,4 +80,35 @@ class MainHerencia {
         }
     }
 
+
+open class View(){
+    open fun inflar(){
+        println("Hola estoy listo para ser inflado")
+    }
+
 }
+
+open class Button( open var texto:String , open var posicion:String):View(){
+    override fun inflar(){
+        println("Hola soy el boton y me estoy pintando, mi texto es:" +
+                " $texto y mi posicion en la vista es: $posicion")
+
+        super.inflar()
+    }
+}
+
+class DisenioBoton(override var texto:String,
+                   override var posicion:String,
+                   valoresquinas:Int):Button(texto, posicion){
+
+    var valoresquinas:Int = valoresquinas
+
+     override fun inflar(){
+         println("Le estoy dando bordes al boton $texto con la posicion $posicion" +
+                 " y con este tamanio de esquinas $this.$valoresquinas")
+
+         super.inflar()
+     }
+
+}
+

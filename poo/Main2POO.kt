@@ -148,7 +148,6 @@ public final class Main2POO {
 
             init {
 
-
             }
 
             constructor(nombre:String){
@@ -157,9 +156,6 @@ public final class Main2POO {
             }
 
         }
-
-
-
 
 
     }
