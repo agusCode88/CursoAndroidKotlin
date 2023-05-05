@@ -137,6 +137,8 @@ Actividad Practica :
 * Uso del super en Kotlin 
 * Uso del Override en Kotlin
 
+Material de Apoyo : https://developer.android.com/codelabs/basic-android-kotlin-training-classes-and-inheritance?hl=es-419#1
+
  
 05/05/2023
 <br>Clase 11 POO - Abstraccion e interfaces  - Singleton , Lateint Keyword  - Companion Oject  </br>
@@ -146,7 +148,6 @@ Actividad Practica :
 * Importancia de las interfaces en Kotlin 
 * Declarar una interfaz 
 * Utilizando interfaces en Kotlin
-
 
 
 06/05/2023 
