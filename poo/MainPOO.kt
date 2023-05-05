@@ -2,7 +2,7 @@ package poo
 
 fun main (){
 
-    var cursoAndroid = CursoAndroid("Android")
+    //var cursoAndroid = CursoAndroid("Android")
 
     var martin:Estudiante = Estudiante()
     var consuelo:Estudiante = Estudiante()
@@ -37,7 +37,7 @@ fun main (){
     listaEstudiante.add(martin)
     listaEstudiante.add(florencia)
 
-    cursoAndroid.agregarEstudiante(florencia)
+ /*   cursoAndroid.agregarEstudiante(florencia)
     cursoAndroid.agregarEstudiante(martin)
     cursoAndroid.agregarEstudiante(sergio)
 
@@ -45,7 +45,7 @@ fun main (){
     cursoAndroid.eliminarEstudianteDelCurso(martin)
     cursoAndroid.listarEstudiantesCurso()
     cursoAndroid.modificarEstudiante(consuelo)
-    cursoAndroid.listarEstudiantesCurso()
+    cursoAndroid.listarEstudiantesCurso()*/
 
 
 }
