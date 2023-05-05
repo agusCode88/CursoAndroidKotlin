@@ -148,6 +148,11 @@ Material de Apoyo : https://developer.android.com/codelabs/basic-android-kotlin-
 * Importancia de las interfaces en Kotlin 
 * Declarar una interfaz 
 * Utilizando interfaces en Kotlin
+* Actividad Practica:
+
+Simulando un Boton en Android con Kotlin : 
+
+https://github.com/agusCode88/simulacionBotonAndroidKotlin
 
 
 06/05/2023 
