@@ -2,11 +2,9 @@ package com.example.aprendiendokotlin.poo
 
 import java.util.Scanner
 
-/*       corregir promedio notas por alumno
-corregir asistencia por alumno
-corregir porqeue al apretar enter no vuelve
-agregar todos los datos al buscar estudiante
-eliminar direccion y telefono del menu principal*/
+/*
+- corregir porqeue al apretar enter no vuelve
+- eliminar direccion y telefono del menu principal*/
 fun main() {
     val registroEstudiante = RegistroEstudiante()
     val menu = Menu(registroEstudiante)
@@ -67,7 +65,12 @@ class Menu(private val registroEstudiante: RegistroEstudiante) {
             val opcionSubMenuMostrar = scanner.nextInt()
             when (opcionSubMenuMostrar) {
                 1 -> registroEstudiante.listarEstudiantes()
-                2 -> registroEstudiante.mostrarPromedioNotasYAsistencia()
+                2 -> {
+                    print("Ingresa el nombre del estudiante: ")
+                    val nombre = scanner.next()
+                    registroEstudiante.mostrarPromedioNotasYAsistencia(nombre)
+                }
+
                 3 -> return mostrarMenuPrincipal()
                 else -> println("Opción inválida. Inténtalo de nuevo.")
             }

@@ -1,7 +1,8 @@
 package com.example.aprendiendokotlin.poo
 
 import java.util.*
-               //prueba
+
+//prueba
 class RegistroEstudiante {
     val estudiantes: MutableMap<String, Estudiante> = mutableMapOf()
 
@@ -77,9 +78,8 @@ class RegistroEstudiante {
         val notas = leerLista("Ingresa las notas del alumno (ingresa 0 para terminar): ") {
             it in 0.0..7.0
         }
-
         val direccion = leerLinea("Ingresa la dirección del alumno: ")
-        val telefono = leerLinea("Ingresa el teléfono del alumno: ")
+        val telefono = leerLinea("Ingresa el telefono del alumno: ")
 
         val estudiante = Estudiante(nombre, rut, edad, notas, asistencia, direccion, telefono)
         estudiantes[nombre] = estudiante
@@ -94,19 +94,20 @@ class RegistroEstudiante {
         } else {
             println("Lista de estudiantes (${estudiantes.size} estudiantes en total):")
             estudiantes.values.forEach { estudiante ->
-                println("- Nombre: ${estudiante.nombre}, Edad: ${estudiante.edad} años, RUT: ${estudiante.rut}")
+                println("- Nombre: ${estudiante.nombre}, Edad: ${estudiante.edad} años, RUT: ${estudiante.rut}}")
             }
         }
     }
 
-    fun mostrarPromedioNotasYAsistencia() {
-        if (estudiantes.isEmpty()) {
-            println("No hay estudiantes en la lista.")
+    fun mostrarPromedioNotasYAsistencia(nombre: String) {
+        val estudiante = estudiantes[nombre]
+        if (estudiante == null) {
+            println("No se encontró al estudiante con nombre $nombre.")
         } else {
-            val promedioNotas = estudiantes.values.map { it.notas.sum() }.average()
-            val promedioAsistencia = estudiantes.values.map { it.asistencia }.average()
-            println("Promedio de notas: $promedioNotas")
-            println("Promedio de asistencia: $promedioAsistencia")
+            val promedioNotas = estudiante.notas.average()
+            val promedioAsistencia = estudiante.asistencia
+            println("Promedio de notas de $nombre: $promedioNotas")
+            println("Promedio de asistencia de $nombre: $promedioAsistencia")
         }
     }
 
@@ -114,7 +115,7 @@ class RegistroEstudiante {
         val nombreABuscar = leerLinea("Ingresa el nombre del estudiante que deseas buscar: ")
         val estudiante = estudiantes[nombreABuscar]
         if (estudiante != null) {
-            println("El estudiante $nombreABuscar tiene ${estudiante.edad} años.")
+            println("El estudiante $nombreABuscar tiene ${estudiante.edad} años, RUT: ${estudiante.rut}, dirección: ${estudiante.direccion}, telefono: ${estudiante.telefono}.")
         } else {
             println("No se encontró ningún estudiante con el nombre $nombreABuscar.")
         }
@@ -126,7 +127,7 @@ class RegistroEstudiante {
         val estudiantesEncontrados = estudiantes.values.filter { it.edad == edadABuscar.toInt() }
         if (estudiantesEncontrados.isNotEmpty()) {
             estudiantesEncontrados.forEach { estudiante ->
-                println("El estudiante ${estudiante.nombre} tiene ${estudiante.edad} años.")
+                println("El estudiante ${estudiante.nombre} tiene ${estudiante.edad} años, RUT: ${estudiante.rut}, dirección: ${estudiante.direccion}, telefono: ${estudiante.telefono}.")
             }
         } else {
             println("No se encontró ningún estudiante con la edad $edadABuscar.")
@@ -140,7 +141,7 @@ class RegistroEstudiante {
         }
         val estudiante = estudiantes.values.find { it.rut == rutABuscar }
         if (estudiante != null) {
-            println("El estudiante ${estudiante.nombre} tiene ${estudiante.edad} años.")
+            println("El estudiante ${estudiante.nombre} tiene ${estudiante.edad} años, RUT: ${estudiante.rut}, dirección: ${estudiante.direccion}, telefono: ${estudiante.telefono}.")
         } else {
             println("No se encontró ningún estudiante con el RUT $rutABuscar.")
         }
@@ -189,36 +190,38 @@ class RegistroEstudiante {
         }
 
 
-        }
-        fun buscarEstudiante(input: String?): Estudiante? {
-            return estudiantes[input ?: ""] ?: estudiantes.values.find { it.rut == input }
-        }
-
-
-        fun actualizarEdadEstudiante(estudiante: Estudiante) {
-            val nuevaEdad = leerEnteroPositivo("Ingresa la nueva edad de ${estudiante.nombre}: ")
-            estudiante.edad = nuevaEdad
-            println("Edad de ${estudiante.nombre} actualizada correctamente.")
-        }
-
-        fun agregarDireccionEstudiante(estudiante: Estudiante) {
-            val nuevaDireccion = leerLinea("Ingresa la dirección de ${estudiante.nombre}: ")
-            estudiante.direccion = nuevaDireccion
-            println("Dirección agregada correctamente.")
-        }
-
-        fun agregarTelefonoEstudiante(estudiante: Estudiante) {
-            val nuevoTelefono = leerLinea("Ingresa el teléfono de ${estudiante.nombre}: ")
-            estudiante.telefono = nuevoTelefono
-            println("Teléfono agregado correctamente.")
-        }
-
-
-        fun eliminarEstudiante(estudiante: Estudiante) {
-            estudiantes.remove(estudiante.rut)?.run {
-                println("El estudiante ${estudiante.nombre} ha sido eliminado del registro.")
-            } ?: println("El estudiante no se encuentra registrado.")
-        }
     }
+
+    fun buscarEstudiante(input: String?): Estudiante? {
+        return estudiantes[input ?: ""] ?: estudiantes.values.find { it.rut == input }
+    }
+
+
+    fun actualizarEdadEstudiante(estudiante: Estudiante) {
+        val nuevaEdad = leerEnteroPositivo("Ingresa la nueva edad de ${estudiante.nombre}: ")
+        estudiante.edad = nuevaEdad
+        println("Edad de ${estudiante.nombre} actualizada correctamente.")
+    }
+
+    fun agregarDireccionEstudiante(estudiante: Estudiante) {
+        val nuevaDireccion = leerLinea("Ingresa la dirección de ${estudiante.nombre}: ")
+        estudiante.direccion = nuevaDireccion
+        println("Dirección agregada correctamente.")
+    }
+
+    fun agregarTelefonoEstudiante(estudiante: Estudiante) {
+        val nuevoTelefono = leerLinea("Ingresa el teléfono de ${estudiante.nombre}: ")
+        estudiante.telefono = nuevoTelefono
+        println("Teléfono agregado correctamente.")
+    }
+
+
+    fun eliminarEstudiante(estudiante: Estudiante) {
+        estudiantes.remove(estudiante.rut)?.run {
+            println("El estudiante ${estudiante.nombre} ha sido eliminado del registro.")
+        } ?: println("El estudiante no se encuentra registrado.")
+    }
+}
+
 
 

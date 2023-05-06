@@ -1,14 +1,16 @@
 package com.example.aprendiendokotlin.poo
+
 class Estudiante(
     val nombre: String,
     val rut: String,
     var edad: Int,
     var notas: List<Double>,
     var asistencia: Double = 0.0,
-    var direccion: String?,
-    var telefono: String?
+    var telefono: String,
+    var direccion: String,
 ) {
-     
+
+
     companion object {
         val RANGO_ASISTENCIA = 0.0..100.0
     }
