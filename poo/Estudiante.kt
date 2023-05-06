@@ -21,3 +21,4 @@ class Estudiante(
         require(notas.all { it in RANGO_ASISTENCIA }) { "Las notas deben estar entre $RANGO_ASISTENCIA" }
     }
 }
+

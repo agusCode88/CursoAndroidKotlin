@@ -1,18 +1,21 @@
 package com.example.aprendiendokotlin.poo
 
-import java.util.*
+import java.util.Scanner
 
+/*       corregir promedio notas por alumno
+corregir asistencia por alumno
+corregir porqeue al apretar enter no vuelve
+agregar todos los datos al buscar estudiante
+eliminar direccion y telefono del menu principal*/
 fun main() {
     val registroEstudiante = RegistroEstudiante()
     val menu = Menu(registroEstudiante)
     menu.mostrarMenuPrincipal()
-
 }
 
 class Menu(private val registroEstudiante: RegistroEstudiante) {
     private val scanner = Scanner(System.`in`)
     private val estudiantes: MutableMap<String, Estudiante> = registroEstudiante.estudiantes
-    var continuar = true
 
     fun mostrarMenuPrincipal() {
         while (true) {
@@ -28,74 +31,53 @@ class Menu(private val registroEstudiante: RegistroEstudiante) {
             println("║ 5. Actualizar estudiantes por nombre o rut ║")
             println("║ 6. Salir                                   ║")
             println("╚════════════════════════════════════════════╝")
-            """.trimIndent()
+                        """.trimIndent()
             )
             print("Ingresa tu opción: ")
-
             var opcionMenuPrincipal: Int? = null
             do {
                 opcionMenuPrincipal = scanner.nextInt()
-                if (opcionMenuPrincipal !in 1..6) {
-                    println("Opción inválida. Inténtalo de nuevo.")
-                } else {
-
-                    when (opcionMenuPrincipal) {
-                        1 -> registroEstudiante.agregarEstudiante()
-                        2 -> mostrarSubMenuMostrar()
-                        3 -> mostrarSubMenuBusqueda()
-                        4 -> mostrarSubMenuOrdenar()
-                        5 -> mostrarSubMenuActualizar()
-                        6 -> return
-                    }
-                    println("\nPresiona enter para volver al menú principal")
-                    readLine()
-                    mostrarMenuPrincipal()
+                when (opcionMenuPrincipal) {
+                    1 -> registroEstudiante.agregarEstudiante()
+                    2 -> mostrarSubMenuMostrar()
+                    3 -> mostrarSubMenuBusqueda()
+                    4 -> mostrarSubMenuOrdenar()
+                    5 -> mostrarSubMenuActualizar()
+                    6 -> return
+                    else -> println("Opción inválida. Inténtalo de nuevo.")
                 }
-            } while (opcionMenuPrincipal != 6)
+            } while (opcionMenuPrincipal !in 1..6)
         }
     }
 
     fun mostrarSubMenuMostrar() {
-
-        do {
+        while (true) {
             println(
                 """
-            ╔══════════════════════════════════════════════╗
-            ║        MENÚ MOSTRAR ESTUDIANTES ANDROID      ║
-            ╠══════════════════════════════════════════════╣
-            ║ 1. Mostrar lista de estudiantes              ║
-            ║ 2. Mostrar promedio de notas y asistencia    ║
-            ║ 3. Volver al menú principal                  ║
-            ╚══════════════════════════════════════════════╝
-        """.trimIndent()
+        ╔══════════════════════════════════════════════╗
+        ║        MENÚ MOSTRAR ESTUDIANTES ANDROID      ║
+        ╠══════════════════════════════════════════════╣
+        ║ 1. Mostrar lista de estudiantes              ║
+        ║ 2. Mostrar promedio de notas y asistencia    ║
+        ║ 3. Volver al menú principal                  ║
+        ╚══════════════════════════════════════════════╝
+    """.trimIndent()
             )
             print("Ingresa tu opción: ")
-
-            var opcionSubMenuMostrar: Int? = null
-            do {
-                opcionSubMenuMostrar = scanner.nextInt()
-                if (opcionSubMenuMostrar !in 1..3) {
-                    println("Opción inválida. Inténtalo de nuevo.")
-                } else {
-
-                    when (opcionSubMenuMostrar) {
-                        1 -> registroEstudiante.listarEstudiantes()
-                        2 -> registroEstudiante.mostrarPromedioNotasYAsistencia()
-                        3 -> return // retornar inmediatamente
-                    }
-                    println("\nPresiona enter para volver al SubMenú Mostrar Estudiantes")
-                    readLine()
-                    if (opcionSubMenuMostrar != 3) {
-                        mostrarSubMenuMostrar()
-                    }
-                }
-            } while (opcionSubMenuMostrar != 3 && continuar)
-        } while (continuar)
+            val opcionSubMenuMostrar = scanner.nextInt()
+            when (opcionSubMenuMostrar) {
+                1 -> registroEstudiante.listarEstudiantes()
+                2 -> registroEstudiante.mostrarPromedioNotasYAsistencia()
+                3 -> return mostrarMenuPrincipal()
+                else -> println("Opción inválida. Inténtalo de nuevo.")
+            }
+        }
     }
 
     fun mostrarSubMenuBusqueda() {
-        println(
-            """
+        while (true) {
+            println(
+                """
             ╔══════════════════════════════════════════════╗
             ║       MENÚ BUSCAR ESTUDIANTES ANDROID        ║
             ╠══════════════════════════════════════════════╣
@@ -105,34 +87,25 @@ class Menu(private val registroEstudiante: RegistroEstudiante) {
             ║ 4. Volver al menú principal                  ║
             ╚══════════════════════════════════════════════╝
         """.trimIndent()
-        )
-        print("Ingresa tu opción: ")
+            )
+            print("Ingresa tu opción: ")
 
-        var opcionSubMenuBusqueda: Int? = null
-        do {
-            opcionSubMenuBusqueda = scanner.nextInt()
-            if (opcionSubMenuBusqueda !in 1..3) {
-                println("Opción inválida. Inténtalo de nuevo.")
-            } else {
+            val opcionSubMenuBusqueda = scanner.nextInt()
 
-                when (opcionSubMenuBusqueda) {
-                    1 -> registroEstudiante.buscarEstudiantePorNombre()
-                    2 -> registroEstudiante.buscarEstudiantePorEdad()
-                    3 -> registroEstudiante.buscarEstudiantePorRut()
-                    4 -> return // retornar inmediatamente
-                }
-                println("\nPresiona enter para volver al SubMenú Buscar Estudiantes")
-                readLine()
-                if (opcionSubMenuBusqueda != 4) {
-                    mostrarSubMenuBusqueda()
-                }
+            when (opcionSubMenuBusqueda) {
+                1 -> registroEstudiante.buscarEstudiantePorNombre()
+                2 -> registroEstudiante.buscarEstudiantePorEdad()
+                3 -> registroEstudiante.buscarEstudiantePorRut()
+                4 -> return mostrarMenuPrincipal()
+                else -> println("Opción inválida. Inténtalo de nuevo.")
             }
-        } while (opcionSubMenuBusqueda != 4 && continuar)
+        }
     }
 
     fun mostrarSubMenuOrdenar() {
-        println(
-            """
+        while (true) {
+            println(
+                """
             ╔══════════════════════════════════════════════╗
             ║      MENÚ ORDENAR ESTUDIANTES ANDROID        ║
             ╠══════════════════════════════════════════════╣
@@ -142,43 +115,31 @@ class Menu(private val registroEstudiante: RegistroEstudiante) {
             ║ 4. Volver al menú principal                  ║
             ╚══════════════════════════════════════════════╝
             """.trimIndent()
-        )
-        print("Ingresa tu opción: ")
+            )
+            print("Ingresa tu opción: ")
 
-        var opcionSubMenuOrdenar: Int? = null
-        do {
-            opcionSubMenuOrdenar = scanner.nextInt()
-            if (opcionSubMenuOrdenar !in 1..3) {
-                println("Opción inválida. Inténtalo de nuevo.")
-            } else {
+            val opcionSubMenuOrdenar = scanner.nextInt()
 
-                when (opcionSubMenuOrdenar) {
-                    1 -> registroEstudiante.ordenarPorNombre()
-                    2 -> registroEstudiante.ordenarPorEdad()
-                    3 -> registroEstudiante.mostrarJovenViejaEstudiante()
-                    4 -> {
-                        continuar = false
-                        return
-                    }
-                }
-                println("\nPresiona enter para volver al SubMenú Ordenar Estudiantes")
-                readLine()
-                if (opcionSubMenuOrdenar != 4) {
-                    mostrarSubMenuOrdenar()
-                }
+            when (opcionSubMenuOrdenar) {
+                1 -> registroEstudiante.ordenarPorNombre()
+                2 -> registroEstudiante.ordenarPorEdad()
+                3 -> registroEstudiante.mostrarJovenViejaEstudiante()
+                4 -> return mostrarMenuPrincipal()
+                else -> println("Opción inválida. Inténtalo de nuevo.")
             }
-        } while (opcionSubMenuOrdenar != 4)
+        }
     }
 
     fun mostrarSubMenuActualizar() {
         print("Ingresa el nombre o RUT del estudiante: ")
-        val input = scanner.nextLine()
+        val input = readLine()
         val estudiante = registroEstudiante.buscarEstudiante(input)
         if (estudiante != null) {
             println("Estudiante encontrado: ${estudiante.nombre}\n")
 
-            println(
-                """
+            while (true) {
+                println(
+                    """
             ╔════════════════════════════════════════════════╗
             ║     MENÚ DE ACTUALIZACIÓN LISTA ESTUDIANTES    ║
             ╠════════════════════════════════════════════════╣
@@ -189,33 +150,27 @@ class Menu(private val registroEstudiante: RegistroEstudiante) {
             ║ 5. Volver al menú principal                    ║
             ╚════════════════════════════════════════════════╝
         """.trimIndent()
-            )
-            print("Ingresa tu opción: ")
+                )
+                print("Ingresa tu opción: ")
 
-            var opcionSubMenuActualizar: Int? = null
-            do {
-                opcionSubMenuActualizar = scanner.nextInt()
-                if (opcionSubMenuActualizar !in 1..3) {
-                    println("Opción inválida. Inténtalo de nuevo.")
-                } else {
+                val opcionSubMenuActualizar = readLine()?.toIntOrNull()
 
-                    when (opcionSubMenuActualizar) {
-                        1 -> registroEstudiante.actualizarEdadEstudiante(estudiante)
-                        2 -> registroEstudiante.agregarDireccionEstudiante(estudiante)
-                        3 -> registroEstudiante.agregarTelefonoEstudiante(estudiante)
-                        4 -> registroEstudiante.eliminarEstudiante(estudiante)
-                        5 -> {
-                            continuar = false
-                            return
-                        }
+                when (opcionSubMenuActualizar) {
+                    1 -> registroEstudiante.actualizarEdadEstudiante(estudiante)
+                    2 -> registroEstudiante.agregarDireccionEstudiante(estudiante)
+                    3 -> registroEstudiante.agregarTelefonoEstudiante(estudiante)
+                    4 -> registroEstudiante.eliminarEstudiante(estudiante)
+                    5 -> {
+                        mostrarMenuPrincipal()
+                        return
                     }
-                    println("\nPresiona enter para volver al SubMenú Ordenar Estudiantes")
-                    readLine()
-                    if (opcionSubMenuActualizar != 5) {
-                        mostrarSubMenuActualizar()
-                    }
+
+                    else -> println("Opción inválida. Inténtalo de nuevo.")
                 }
-            } while (opcionSubMenuActualizar != 5)
+            }
+        } else {
+            println("Estudiante no encontrado.")
         }
     }
 }
+
