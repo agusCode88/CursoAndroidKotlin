@@ -39,7 +39,7 @@ package poo
             listaEstudiantes.remove(estudiante)
             println("Estudiante ha sido eliminad@")
         } else {
-            println("No ha sido eliminad@")
+            println("No ha sido eliminad@").
         }
     }
     fun modificarEstudiante(estudiante: Estudiante){
