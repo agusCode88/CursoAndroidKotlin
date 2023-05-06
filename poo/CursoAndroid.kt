@@ -57,7 +57,7 @@ package poo
             estudiante.edad = edad
             println("Fecha nacimiento: ")
             var fechaNacimiento =readLine().toString()
-            estudiante.fechaNacimiento = fechaNacimiento
+            estudiante.fechaNacimiento = fechaNacimiento..
         }
     }
 */
