@@ -40,23 +40,17 @@ fun main(){
 
         init {
             probarAccesos()
-
         }
 
-
          override fun saludar(){
-
             println("Alumn@ Saluda $nombre")
             super.saludar()
-
         }
 
         fun probarAccesos(){
-
             this.apellido
             this.nombre
             this.edad
-
         }
 
         fun promedioNotas(){
@@ -69,17 +63,14 @@ fun main(){
     class Profesor(nombre: String,apellido: String,edad:Int, protected var sueldo:Int): Humano(nombre, apellido,edad) {
 
         override fun saludar(){
-
             println("Relator Saluda $nombre")
             super.saludar()
-
         }
 
         fun mostrarSueldo(){
             println("Sueldo Relator(a) : ${sueldo} ")
         }
     }
-
 
 open class View(){
     open fun inflar(){
