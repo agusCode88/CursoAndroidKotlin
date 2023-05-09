@@ -1,4 +1,4 @@
-package poo
+package poo.herencia
 
 
 // class <Nombre de la clase> constructor primario ()
