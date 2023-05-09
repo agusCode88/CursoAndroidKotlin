@@ -1,4 +1,4 @@
-# PrimeraClaseAndroid Repositorio
+# Bootcamp Kotlin y Android 
 
 22/04/2023
 <br>Clase 0 <br/> 
@@ -17,7 +17,7 @@
 * Gitflow
 
 21/04/2023
-Clase 1- Variables y funciones en Kotlin 
+<br>Clase 1- Variables y funciones en Kotlin<br/>  
 
 * Historia y fundamentos de Kotlin 
 * Variables en Kotlin 
@@ -50,7 +50,7 @@ https://developer.android.com/codelabs/basic-android-kotlin-compose-kotlin-funda
 https://github.com/agusCode88/PrimeraClaseAndroid/blob/Develop/tareas/TareaArreglos.kt
 
 26/04/2023
-Clase 4 - Arreglos y Listas de arreglos
+<br>Clase 4 - Arreglos y Listas de arreglos<br/> 
 
 * Recorriendo un Array con for
 * Uso del while y do while
@@ -67,7 +67,7 @@ Actividad Practica: https://github.com/agusCode88/PrimeraClaseAndroid/blob/Devel
 
 
 27/04/2023
-Clase 5 - Mapas o Diccionario de Datos 
+<br>Clase 5 - Mapas o Diccionario de Datos </br>
 
 * Creando Diccionario o Mapa de datos
 * Mapas Mutables e Inmutables
@@ -85,7 +85,7 @@ Actividad Practica: https://github.com/agusCode88/PrimeraClaseAndroid/blob/Devel
 
 
 28/04/2023
-Clase 6 - POO - Poniendo en practica lo aprendido
+<br>Clase 6 - POO - Poniendo en practica lo aprendido</br>
 
 * Terminar actividad Clase 5 
 * Los equipos hacen merge de las ramas
@@ -94,7 +94,7 @@ Clase 6 - POO - Poniendo en practica lo aprendido
 
 
 29/04/2023
-Clase 7 - POO - Programacion orientada a Objetos en Kotlin
+<br>Clase 7 - POO - Programacion orientada a Objetos en Kotlin</br>
 
 * Paradigma de orientacion a Objeto
 * Definicion de una Clase o Entidad
@@ -109,22 +109,65 @@ Material de apoyo : https://developer.android.com/codelabs/basic-android-kotlin-
 Actividad Practica : 
 
 02/05/2023
-Clase 8 - POO  Uso de Data y Objects Classes - Encapsulamiento
+<br>Clase 8 - POO  Propiedades-Constructor Primario- Constructor Secundario- Getters y Setters </br>
 
-* Defincion de Data Classes
-* Creacion de Data Class
-* Definicion de Data Object
-* Encapsulamiento (public - private - protected) 
+* Uso del constructor primario 
+* Uso del constructor y propiedad init
+* Uso del constructor secundario
+* Diferencias del uso entre cosntructores
+* Usando las porpiedades get y set
+* Instanciando Objetos 7
+
+* Actividad Práctica : https://github.com/agusCode88/CursoAndroidKotlin/blob/Develop/tareas/MantenedorCurso.kt
 
 03/05/2023
-Clase 9 Herencia - Abstraccion - Interfaces en Kotlin 
+<br>Clase 9 POO - Práctica de POO  </br>
+
+* Tarea Mantenedor del Curso con POO
+* Trabajo en equipo o individual 
+* Repaso de la estructura de una clase en Kotlin.
+
 
 04/05/2023
-Clase 10   Polimorfismo en Kotlin 
+<br>Clase 10 POO - Herencia  y Encapsulamiento </br>
+
+* Encapsulamiento : Modificadores de acceso (public - private - protected)
+* Herencia: Clase Madre o Padre - Clase Hija
+* Modificadores de acceso en la herencia de clases 
+* Uso del super en Kotlin 
+* Uso del Override en Kotlin
+
+Material de Apoyo : https://developer.android.com/codelabs/basic-android-kotlin-training-classes-and-inheritance?hl=es-419#1
+
+ 
+05/05/2023
+<br>Clase 11 POO - Abstraccion e interfaces  - Singleton , Lateint Keyword  - Companion Oject  </br>
+
+* Definicion de abstraccion
+* Implementacion de abstraccion en Kotlin
+* Importancia de las interfaces en Kotlin 
+* Declarar una interfaz 
+* Utilizando interfaces en Kotlin
+* Actividad Practica:
+
+Simulando un Boton en Android con Kotlin : 
+
+https://github.com/agusCode88/simulacionBotonAndroidKotlin
 
 
+06/05/2023 
+<br> Clase 12 - POO->  Data Class - Object Class - Enum Class - Sealed Classs</br>
 
-
+* Defincion de Data Class
+* Creacion de Data Class.
+* Definicion de Data Object
+* Creacion de Data Object
+* Definicion de Enum Class
+* Creacion de una Enum Class
+* Definicion de Sealed Class
+* Creacion Sealed Class
+* Definicion de Companion Ojects
+* Creacion de Companion Object
 
 
 
