@@ -192,4 +192,28 @@ https://github.com/agusCode88/simulacionBotonAndroidKotlin
 
 
 
+09/05/2023 
+<br> Clase 15 - Android Extension - Interactuando entre ACTIVITIES </br>
+
+* Instalacion de android extension :
+
+plugins {
+    // ...
+    id 'kotlin-android-extensions'
+}
+
+android {
+    // ...
+}
+
+dependencies {
+    // ...
+}
+
+* Que son los intento?
+* Ejecuatndo un Inten Explicito
+* Enviando datos entre actividades
+* Enviando un objeto entre acctividades
+
+
 
