@@ -210,10 +210,13 @@ dependencies {
     // ...
 }
 
-* Que son los intento?
-* Ejecuatndo un Inten Explicito
+* Que son los intents?
+* Ejecuatndo un Intent Explicito
 * Enviando datos entre actividades
 * Enviando un objeto entre acctividades
+* Ejecutando un Intent implicito
+* Enviar Datos a otra APP en Android
+* Tarea : Enviar un objeto planeta al Whatsapp del grupo Bootcamp
 
 
 
