@@ -156,7 +156,13 @@ https://github.com/agusCode88/simulacionBotonAndroidKotlin
 
 
 06/05/2023 
-<br> Clase 12 - POO->  Data Class - Object Class - Enum Class - Sealed Classs</br>
+<br> Clase 12 - POO-> Avance en el portafolio </br>
+
+* Dia de avance en el portafolio personal
+* Resolucion de dudas 
+
+08/05/2023 
+<br> Clase 13 - POO->  Data Class - Object Class - Enum Class - Sealed Classs</br>
 
 * Defincion de Data Class
 * Creacion de Data Class.
@@ -169,6 +175,20 @@ https://github.com/agusCode88/simulacionBotonAndroidKotlin
 * Definicion de Companion Ojects
 * Creacion de Companion Object
 
+
+09/05/2023 
+<br> Clase 14 - Ambiente de Desarrollo Android </br>
+
+* Creacion de un proyecto en Android
+* Esteuctura de un proyecto en Android
+* Directorios ( java - res - manifest)
+* Views y ViewGroups
+* Repaso de Linear Layout y RelativeLayout
+* Dibujando una vista con ConstraintLayout
+* Eventos de un boton 
+* Informacion por consola LOGCAT
+* Informacion al usuario TOAST
+* Intengrando la tarea del boton a nuestro proyecto
 
 
 
