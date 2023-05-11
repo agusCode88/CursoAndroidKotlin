@@ -201,11 +201,12 @@ https://github.com/agusCode88/simulacionBotonAndroidKotlin
 * Enviando un objeto entre acctividades
 * Ejecutando un Intent implicito
 * Enviar Datos a otra APP en Android
-* Tarea : Enviar un objeto planeta al Whatsapp del grupo Bootcamp
+
+* TAREA : Enviar un objeto planeta al Whatsapp del grupo Bootcamp
 
 
 11/05/2023 
-<br> Clase 15  Trabajando con la Camara en Android </br>
+<br> Clase 16  Trabajando con la Camara en Android </br>
 
 * Creacion de Layout para tomar fotografia.
 * Habilitar permisos en el Manifest. 
@@ -214,6 +215,8 @@ https://github.com/agusCode88/simulacionBotonAndroidKotlin
 * Intent Implicito : LLamar a la camara.
 * Escuchar el resultado de la camara.
 * Mostrar imagen en el View Image.
+
+Material de Estudio : https://developer.android.com/training/permissions/requesting?hl=es-419#already-granted
 
 
 
