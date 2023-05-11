@@ -191,32 +191,31 @@ https://github.com/agusCode88/simulacionBotonAndroidKotlin
 * Intengrando la tarea del boton a nuestro proyecto
 
 
-
-09/05/2023 
-<br> Clase 15 - Android Extension - Interactuando entre ACTIVITIES </br>
-
-* Instalacion de android extension :
-
-plugins {
-    // ...
-    id 'kotlin-android-extensions'
-}
-
-android {
-    // ...
-}
-
-dependencies {
-    // ...
-}
+10/05/2023 
+<br> Clase 15  Interactuando entre ACTIVITIES - INTENTS EN ANDROID </br>
 
 * Que son los intents?
 * Ejecuatndo un Intent Explicito
 * Enviando datos entre actividades
+* Objeto Parcelable (Data Class)
 * Enviando un objeto entre acctividades
 * Ejecutando un Intent implicito
 * Enviar Datos a otra APP en Android
 * Tarea : Enviar un objeto planeta al Whatsapp del grupo Bootcamp
+
+
+11/05/2023 
+<br> Clase 15  Trabajando con la Camara en Android </br>
+
+* Creacion de Layout para tomar fotografia.
+* Habilitar permisos en el Manifest. 
+* Comprobar el permiso de la camara. 
+* Escuchar respuesta a los permisos.
+* Intent Implicito : LLamar a la camara.
+* Escuchar el resultado de la camara.
+* Mostrar imagen en el View Image.
+
+
 
 
 
