@@ -219,6 +219,22 @@ https://github.com/agusCode88/simulacionBotonAndroidKotlin
 Material de Estudio : https://developer.android.com/training/permissions/requesting?hl=es-419#already-granted
 
 
+11/05/2023 
+<br> Clase 17  Trabajando con APPBAR en Android </br>
 
+* Creacion de Layout para el AppBar
+* Configurando el archivo Manifest
+* Invocando al AppBar en la Actividad. 
+* Configurando Actividad Padre
+* Volviendo de una actividad a otra 
+* Creacion de un Menu para el APPBAR
+* Configurando el Menu en Android
+* Orientacion a objetos con el APPBAR
+* Invocando al AppBar en las vistas.
+* Agregando recursos a nuestro proyecto 
+
+Recursos de imagenes: 
+
+https://1drv.ms/u/s!AiaYVPIYPVGJidR0Bb-7aVzVL7qxBw?e=cJxJWO
 
 
