@@ -247,9 +247,7 @@ https://1drv.ms/u/s!AiaYVPIYPVGJidR0Bb-7aVzVL7qxBw?e=cJxJWO
 
 
 
-15/05/2023    MODULO 6 
 
-CLASE 1 
 
 
 
