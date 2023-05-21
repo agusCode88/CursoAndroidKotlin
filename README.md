@@ -238,7 +238,7 @@ https://1drv.ms/u/s!AiaYVPIYPVGJidR0Bb-7aVzVL7qxBw?e=cJxJWO
 
 
 13/05/2023 
-<br> Clase 17  Trabajando con APPBAR en Android- Avance proyecto Portafolio </br>
+<br> Clase 18  Trabajando con APPBAR en Android- Avance proyecto Portafolio </br>
 
 * Orientacion a objetos con el APPBAR
 * Invocando al AppBar en las vistas.
